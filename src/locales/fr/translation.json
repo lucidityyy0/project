@@ -1,0 +1,469 @@
+{
+  "header": {
+    "home": "Acceuil",
+    "team": "Equipe",
+    "advice": "Philosophie",
+    "services": "Soins",
+    "beforeAfter": "Gallerie",
+    "contact": "Contact",
+    "bookAppointment": "Prendre rendez-vous",
+    "dentalCenter": "Cabinet de groupe",
+    "brandName": "Mandarona",
+    "toggleMenu": "Ouvrir le menu"
+  },
+  "footer": {
+    "quickLinks": "Navigation",
+    "ourTeam": "Notre equipe",
+    "ourServices": "Nos specialites",
+    "gallery": "Parcours medical",
+    "blog": "Philosophie de soin",
+    "contact": "Contact",
+    "legalInfo": "Informations legales",
+    "legalMentions": "Mentions legales",
+    "privacyPolicy": "Politique de confidentialite",
+    "cookieManagement": "Gestion des cookies",
+    "allRightsReserved": "Tous droits reserves.",
+    "designedWithCare": "Pratique fondee sur les recommandations scientifiques actuelles."
+  },
+  "cta": {
+    "title": "Un accompagnement personnalise a chaque etape",
+    "subtitle": "Prenez rendez-vous pour un bilan clinique complet et un plan de traitement adapte.",
+    "button": "Prendre rendez-vous",
+    "whatsapp": "WhatsApp"
+  },
+  "stats": {
+    "yearsExperience": "Annees d'experience cumulee",
+    "satisfiedPatients": "Patients suivis",
+    "googleReviews": "Avis patients",
+    "modernEquipment": "Pratique pluridisciplinaire",
+    "qualityCommitment": "Engagement scientifique"
+  },
+  "whatsappButton": {
+    "message": "Bonjour, je souhaite prendre rendez-vous pour une consultation au cabinet.",
+    "tooltip": "Ecrire sur WhatsApp",
+    "aria": "Contacter le cabinet sur WhatsApp"
+  },
+  "home": {
+    "hero": {
+      "title": "Notre cabinet dentaire :<br/> <span class=\"font-signature text-5xl md:text-7xl text-primary-500 block mt-2\">la continuite d'un art medical ancien</span>",
+      "subtitle": "Depuis ses origines millenaires, l'art dentaire evolue avec un objectif constant : preserver la sante, la fonction et la qualite de vie du patient d'aujourd'hui.",
+      "bookAppointment": "Prendre rendez-vous",
+      "emergency": "Besoin d'un avis rapide ?",
+      "contactUs": "Contactez-nous",
+      "yourHealthPriority": "Prise en charge centree sur le patient",
+      "callUs": "Appelez-nous :"
+    },
+    "intro": {
+      "slogan": "Savoir medical, technologies actuelles et relation de confiance.",
+      "title": "Notre cabinet s'inscrit dans cette continuite historique avec une vision moderne, fondee sur les donnees scientifiques actuelles et une prise en charge individualisee.",
+      "description": "Chaque specialite est abordee avec un diagnostic rigoureux, une information claire du patient et une coordination pluridisciplinaire lorsque necessaire.",
+      "learnMore": "Lire la philosophie de soin",
+      "extendedDescription": "Au-dela des specialites, nous nous engageons a offrir une ecoute attentive, des plans de traitement personnalises et evolutifs, une pratique basee sur les recommandations scientifiques et une relation de confiance durable."
+    },
+    "media": {
+      "dentist": "Dentiste en consultation",
+      "chair": "Fauteuil de soins dentaires",
+      "heroPatient": "Patiente souriante",
+      "introOne": "Equipe dentaire au cabinet",
+      "introTwo": "Soin clinique en cours",
+      "child": "Patient souriant",
+      "doctor": "Praticienne du cabinet"
+    },
+    "whyChooseUs": {
+      "title": "Notre approche clinique",
+      "items": {
+        "tech": {
+          "title": "Preservation maximale",
+          "desc": "La dent naturelle est toujours privilegiee lorsqu'une therapeutique conservatrice est possible."
+        },
+        "painless": {
+          "title": "Medecine fondee sur les preuves",
+          "desc": "Les materiaux et protocoles utilises sont selectionnes selon les donnees scientifiques actuelles."
+        },
+        "transparency": {
+          "title": "Information claire",
+          "desc": "Chaque indication est expliquee avec transparence, y compris les alternatives et suites operatoires."
+        },
+        "expertTeam": {
+          "title": "Suivi dans le temps",
+          "desc": "Un suivi regulier est organise pour maintenir les resultats fonctionnels et biologiques."
+        }
+      }
+    },
+    "everythingYouNeed": {
+      "title": "Une pratique <span class=\"font-medium\">centree sur le patient</span>",
+      "subtitle": "Une prise en charge globale et evolutive",
+      "items": [
+        "Ecoute attentive et temps d'explication dedie",
+        "Plans de traitement personnalises et coordonnes",
+        "Orthodontie, soins conservateurs, chirurgie et implantologie au meme cabinet",
+        "Evaluation benefice/risque avant toute intervention",
+        "Prevention des recidives et stabilite a long terme"
+      ],
+      "more": "Chaque decision therapeutique est adaptee a votre situation clinique."
+    },
+    "services": {
+      "expertise": "Nos specialites",
+      "title": "Une dentisterie moderne et raisonnee",
+      "allServices": "Voir toutes les specialites",
+      "learnMore": "Voir le detail"
+    },
+    "team": {
+      "subtitle": "L'equipe medicale",
+      "title": "Des praticiennes engagees et une equipe d'accueil attentive",
+      "viewAll": "Decouvrir toute l'equipe",
+      "members": [
+        {
+          "name": "Dr Awatif Zaki Ziraoui",
+          "role": "Orthodontiste"
+        },
+        {
+          "name": "Dr Nawar Dellero",
+          "role": "Chirurgien-dentiste omnipraticienne"
+        },
+        {
+          "name": "Ilham",
+          "role": "Assistante d'accueil"
+        }
+      ]
+    },
+    "quote": {
+      "text": "\"La continuite d'un art medical ancien, au service du patient d'aujourd'hui.\"",
+      "author": "Philosophie du cabinet"
+    },
+    "testimonials": {
+      "text": "Diagnostic clinique rigoureux, fonction, equilibre et stabilite a long terme.",
+      "note": "Approche pluridisciplinaire et recommandations scientifiques actuelles.",
+      "rateUs": "Consultez nos avis sur",
+      "recent": "Mise a jour recente",
+      "goToReview": "Aller a l'avis {{number}}",
+      "googleAlt": "Logo Google",
+      "reviews": [
+        {
+          "name": "Orthodontie",
+          "text": "Traitements multi-attaches et aligneurs transparents selon l'indication medicale.",
+          "rating": 5
+        },
+        {
+          "name": "Soins conservateurs",
+          "text": "Preservation maximale des dents naturelles avec une dentisterie minimalement invasive.",
+          "rating": 5
+        },
+        {
+          "name": "Chirurgie dentaire",
+          "text": "Actes realises selon les protocoles medicaux actuels apres evaluation benefice/risque.",
+          "rating": 5
+        },
+        {
+          "name": "Implantologie",
+          "text": "Planification precise integree au projet prothetique global, avec alternatives discutees.",
+          "rating": 5
+        }
+      ]
+    }
+  },
+  "about": {
+    "media": {
+      "heroImage": "Cabinet dentaire moderne",
+      "approachImage": "Soin dentaire au fauteuil"
+    },
+    "hero": {
+      "subtitle": "NOTRE VISION",
+      "title": "La continuite d'un art medical ancien <br/> <span class=\"font-bold\">au service du patient d'aujourd'hui</span>",
+      "description": "Depuis l'Antiquite, l'art dentaire evolue pour preserver la sante, la fonction et la qualite de vie. Notre cabinet prolonge cette histoire avec une pratique moderne, individualisee et scientifiquement fondee."
+    },
+    "mission": {
+      "title": "Notre engagement",
+      "description": "Associer savoir medical, technologies actuelles et relation de confiance afin d'offrir des soins precis, explicites et durables.",
+      "items": {
+        "benevolence": {
+          "title": "Ecoute",
+          "desc": "Un temps d'explication dedie pour chaque patient et chaque famille."
+        },
+        "excellence": {
+          "title": "Rigueur clinique",
+          "desc": "Diagnostic complet, analyse de l'occlusion et planification personnalisee."
+        },
+        "safety": {
+          "title": "Decision raisonnee",
+          "desc": "Evaluation benefice/risque et coordination pluridisciplinaire avant chaque acte."
+        }
+      }
+    },
+    "approach": {
+      "quote": "\"Fonction, equilibre et stabilite a long terme.\"",
+      "subtitle": "PARCOURS DE SOIN",
+      "title": "Une prise en charge <br/> <span class=\"font-bold\">coordonnee et evolutive</span>",
+      "steps": {
+        "1": {
+          "title": "Bilan clinique complet",
+          "desc": "Analyse clinique, fonctionnelle et imagerie pour poser une indication precise."
+        },
+        "2": {
+          "title": "Plan de traitement personnalise",
+          "desc": "Choix therapeutique explique avec alternatives et objectifs a long terme."
+        },
+        "3": {
+          "title": "Suivi et prevention",
+          "desc": "Controles reguliers, ajustements et prevention des recidives."
+        }
+      }
+    }
+  },
+  "servicesPage": {
+    "hero": {
+      "title": "Nos specialites",
+      "description": "Chaque specialite est abordee avec une vision moderne, fondee sur les donnees scientifiques actuelles et une prise en charge individualisee."
+    },
+    "media": {
+      "heroImage": "Equipe dentaire en consultation",
+      "ctaImage": "Praticienne du cabinet"
+    },
+    "categories": {
+      "surgery": "Chirurgie dentaire",
+      "esthetic": "Esthetique dentaire",
+      "orthodontics": "Orthodontie",
+      "general": "Soins conservateurs",
+      "implantology": "Implantologie"
+    },
+    "descriptions": {
+      "surgery": "De l'extraction d'urgence a la chirurgie raisonnee : protocoles actuels, information claire et coordination interdisciplinaire.",
+      "esthetic": "Amelioration harmonieuse du sourire, respectueuse de la biologie et des tissus dentaires.",
+      "orthodontics": "Prise en charge preventive et corrective chez l'enfant, l'adolescent et l'adulte.",
+      "general": "Preserver la dent naturelle grace a une dentisterie conservatrice et minimalement invasive.",
+      "implantology": "Remplacement de la dent absente avec planification rigoureuse et alternatives discutees."
+    },
+    "cards": [
+      {
+        "category": "Soins conservateurs",
+        "title": "Preserver la dent naturelle : un principe ancien, une exigence moderne",
+        "description": "Des recettes empiriques de l'Antiquite aux premieres obturations decrites par Pierre Fauchard au XVIIIe siecle, la conservation dentaire est devenue une discipline scientifique.",
+        "offerings": [
+          "Preservation maximale des dents naturelles",
+          "Materiaux modernes valides scientifiquement",
+          "Confort du patient et explication detaillee des traitements",
+          "Suivi regulier pour maintenir la sante bucco-dentaire"
+        ]
+      },
+      {
+        "category": "Orthodontie",
+        "title": "Corriger, accompagner, stabiliser",
+        "description": "De l'alignement empirique de l'Antiquite a la specialite moderne structuree au XXe siecle, l'orthodontie integre aujourd'hui biomecanique, croissance cranio-faciale et outils numeriques.",
+        "offerings": [
+          "Analyse orthodontique complete adaptee a l'age",
+          "Prise en charge preventive chez l'enfant et corrective chez l'adulte",
+          "Multi-attaches et aligneurs transparents selon indication",
+          "Attention a la stabilite des resultats et a la prevention des recidives"
+        ]
+      },
+      {
+        "category": "Chirurgie dentaire",
+        "title": "De l'extraction d'urgence a la chirurgie raisonnee",
+        "description": "L'anesthesie, l'asepsie et l'imagerie moderne ont transforme la chirurgie dentaire en discipline maitrisee, integree a des plans de traitement globaux.",
+        "offerings": [
+          "Protocoles medicaux actuels respectes",
+          "Evaluation precise du rapport benefice/risque",
+          "Information claire sur indications et suites operatoires",
+          "Coordination avec les autres specialites du cabinet"
+        ]
+      },
+      {
+        "category": "Implantologie",
+        "title": "Remplacer la dent absente : une avancee majeure du XXe siecle",
+        "description": "L'implantologie moderne s'appuie sur l'osteo-integration du titane decrite par Branemark dans les annees 1950, transformant la prise en charge de l'edentement.",
+        "offerings": [
+          "Evaluation medicale rigoureuse avant indication implantaire",
+          "Planification integree au projet prothetique global",
+          "Information complete sur les alternatives possibles",
+          "Approche prudente fondee sur les donnees scientifiques actuelles"
+        ]
+      },
+      {
+        "category": "Esthetique dentaire",
+        "title": "Quand la fonction rencontre l'harmonie du sourire",
+        "description": "L'esthetique dentaire moderne vise une amelioration naturelle du sourire, sans transformation artificielle et dans le respect de la biologie.",
+        "offerings": [
+          "Approche esthetique raisonnee respectueuse des tissus",
+          "Analyse du sourire integree au visage et a la fonction",
+          "Solutions adaptees aux attentes sans standardisation",
+          "Accompagnement dans le choix des traitements esthetiques"
+        ]
+      }
+    ],
+    "learnMore": "Prendre rendez-vous",
+    "cta": {
+      "subtitle": "PHILOSOPHIE DE SOIN",
+      "title": "Une dentisterie <br/> humaine, moderne <br/> et personnalisee",
+      "description": "Notre cabinet de groupe associe orthodontie, omnipratique, chirurgie et implantologie pour une prise en charge coherente, prudente et durable.",
+      "button": "Prendre rendez-vous"
+    }
+  },
+  "gallery": {
+    "hero": {
+      "subtitle": "PARCOURS",
+      "title": "De l'histoire de l'art dentaire <br/> <span class=\"font-bold\">a la pratique clinique actuelle</span>",
+      "description": "Chaque domaine du cabinet suit une meme ligne directrice : proteger la fonction, respecter la biologie et garantir la stabilite a long terme."
+    },
+    "categories": {
+      "orthodontics": "Orthodontie",
+      "esthetic": "Esthetique",
+      "implantology": "Implantologie",
+      "general": "Soins conservateurs"
+    },
+    "cases": {
+      "1": {
+        "title": "Soins conservateurs",
+        "desc": "De la gestion de la douleur dans l'Antiquite a la dentisterie minimalement invasive d'aujourd'hui."
+      },
+      "2": {
+        "title": "Orthodontie de l'enfant",
+        "desc": "Approche preventive et interceptive pendant la croissance pour guider la fonction."
+      },
+      "3": {
+        "title": "Orthodontie de l'adulte",
+        "desc": "Traitements multi-attaches et aligneurs transparents selon l'indication medicale."
+      },
+      "4": {
+        "title": "Chirurgie dentaire",
+        "desc": "Interventions integrees au plan global, avec indications raisonnees et protocoles actuels."
+      },
+      "5": {
+        "title": "Implantologie moderne",
+        "desc": "Planification prothetique globale et information complete sur les alternatives."
+      },
+      "6": {
+        "title": "Esthetique dentaire",
+        "desc": "Harmonie du sourire dans le respect des tissus et de la fonction."
+      }
+    },
+    "before": "Contexte historique",
+    "after": "Pratique actuelle",
+    "allCases": "Nos domaines de prise en charge",
+    "explore": "Explorez les grands axes cliniques de notre cabinet de groupe.",
+    "placeholders": {
+      "before": "Repere historique",
+      "after": "Application clinique"
+    },
+    "navigation": {
+      "previous": "Element precedent",
+      "next": "Element suivant",
+      "goToCase": "Aller au domaine {{number}}"
+    },
+    "cta": {
+      "title": "Vous souhaitez un avis <span class=\"font-bold\">personnalise ?</span>",
+      "button": "Prendre rendez-vous"
+    }
+  },
+  "teamPage": {
+    "hero": {
+      "title": "Notre dream team du sourire",
+      "description": "Le cabinet reunit une orthodontiste, une chirurgien-dentiste omnipraticienne et une equipe d'assistantes engagees pour une prise en charge globale et pluridisciplinaire."
+    },
+    "members": [
+      {
+        "name": "Dr Awatif Zaki Ziraoui",
+        "role": "Orthodontiste - Inscription a l'Ordre n°3121",
+        "description": "Docteur d'Etat en chirurgie dentaire, laureate de l'Universite de Monastir et ancienne attachee des hopitaux de Liege. Elle prend en charge l'orthodontie de l'enfant, de l'adolescent et de l'adulte, y compris les aligneurs transparents, les troubles respiratoires du sommeil et l'evaluation fonctionnelle de l'ATM."
+      },
+      {
+        "name": "Dr Nawar Dellero",
+        "role": "Chirurgien-dentiste omnipraticienne - Inscription a l'Ordre n°6429",
+        "description": "Docteur en medecine dentaire diplomee de la Faculte de Medecine Dentaire de Rabat, Universite Mohammed V. Sa pratique repose sur la prevention, le diagnostic precis, les soins conservateurs, la parodontologie, les protheses et l'esthetique du sourire, en coordination avec les autres disciplines du cabinet."
+      },
+      {
+        "name": "Ilham",
+        "role": "Assistante d'accueil",
+        "description": "Toujours souriante et a l'ecoute, elle assure un accueil chaleureux, un suivi administratif rigoureux et des rappels de rendez-vous fiables pour chaque patient."
+      },
+      {
+        "name": "Ghizlane",
+        "role": "Assistante au fauteuil",
+        "description": "Experte en orthodontie, elle accompagne les soins avec bienveillance, rassure les patients et explique les etapes de traitement avec patience."
+      },
+      {
+        "name": "Loubna",
+        "role": "Assistante au fauteuil",
+        "description": "Douce, discrete et efficace, elle participe a une prise en charge fluide avec un professionnalisme chaleureux et rassurant."
+      }
+    ],
+    "viewProfile": "Nous contacter",
+    "cta": {
+      "title": "Une equipe <br/> <span class=\"font-medium\">coordonnee autour du patient</span>",
+      "description": "Chaque prise en charge repose sur un diagnostic clinique rigoureux, une analyse de l'occlusion, de la fonction et de la croissance, ainsi qu'une information claire du patient ou de sa famille."
+    }
+  },
+  "contact": {
+    "hero": {
+      "subtitle": "CONTACT",
+      "title": "Une equipe <br/> <span class=\"font-bold\">a votre ecoute</span>",
+      "description": "Besoin d'un bilan, d'un traitement orthodontique, de soins conservateurs, de chirurgie ou d'implantologie ? Notre cabinet de groupe vous accompagne avec une information claire et des plans de traitement personnalises."
+    },
+    "info": {
+      "title": "Coordonnees du cabinet",
+      "address": "Adresse",
+      "fullAddress": "836 boulevard El Qods 2e etage\n20480 Casablanca, Maroc",
+      "phone": "Telephone",
+      "phoneValue": "+212 522 21 35 66",
+      "email": "Email",
+      "emailValue": "contact@mandarona.ma",
+      "hours": {
+        "title": "Horaires d'ouverture",
+        "week": "Lundi - Vendredi",
+        "weekValue": "09:00 - 19:00",
+        "saturday": "Samedi",
+        "saturdayValue": "09:00 - 13:00",
+        "sunday": "Dimanche",
+        "closed": "Ferme"
+      }
+    },
+    "form": {
+      "title": "Envoyez-nous <span class=\"font-bold\">votre demande</span>",
+      "name": "Nom complet",
+      "namePlaceholder": "Votre nom",
+      "phone": "Telephone",
+      "phonePlaceholder": "Votre numero",
+      "email": "Email",
+      "emailPlaceholder": "votre@email.com",
+      "subject": "Motif",
+      "subjects": {
+        "consultation": "Consultation generale",
+        "orthodontics": "Orthodontie",
+        "esthetic": "Esthetique dentaire",
+        "implants": "Implantologie",
+        "emergency": "Chirurgie / urgence"
+      },
+      "message": "Message",
+      "messagePlaceholder": "Precisez votre besoin et vos attentes.",
+      "submit": "Envoyer la demande",
+      "sending": "Envoi en cours...",
+      "success": "Message envoye avec succes. Nous reviendrons vers vous rapidement."
+    },
+    "map": {
+      "title": "Cabinet dentaire - Casablanca"
+    }
+  },
+  "conseilsPage": {
+    "hero": {
+      "title": "Une philosophie de soin centree sur le patient",
+      "description": "Au-dela des specialites, notre cabinet s'engage sur quatre principes cliniques qui structurent chaque prise en charge."
+    },
+    "items": {
+      "brushing": {
+        "title": "Ecoute attentive",
+        "description": "Un temps d'explication est dedie a chaque consultation pour comprendre les besoins, les priorites et le contexte medical du patient."
+      },
+      "flossing": {
+        "title": "Plans de traitement personnalises",
+        "description": "Chaque plan est evolutif, coordonne entre specialites et adapte a l'age, a la fonction et aux objectifs de stabilite a long terme."
+      },
+      "diet": {
+        "title": "Recommandations scientifiques",
+        "description": "Nos indications therapeutiques s'appuient sur les donnees scientifiques actuelles, avec une evaluation benefice/risque avant toute intervention."
+      },
+      "visits": {
+        "title": "Relation de confiance durable",
+        "description": "Le suivi regulier et la clarte de l'information permettent de maintenir la sante bucco-dentaire, prevenir les recidives et accompagner le patient dans le temps."
+      }
+    }
+  }
+}

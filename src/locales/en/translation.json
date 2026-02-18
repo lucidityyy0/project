@@ -1,0 +1,469 @@
+{
+  "header": {
+    "home": "Home",
+    "team": "Team",
+    "advice": "Philosophy",
+    "services": "Care",
+    "beforeAfter": "Gallery",
+    "contact": "Contact",
+    "bookAppointment": "Book an Appointment",
+    "dentalCenter": "Group Practice",
+    "brandName": "Mandarona",
+    "toggleMenu": "Open menu"
+  },
+  "footer": {
+    "quickLinks": "Navigation",
+    "ourTeam": "Our team",
+    "ourServices": "Our specialties",
+    "gallery": "Clinical path",
+    "blog": "Care philosophy",
+    "contact": "Contact",
+    "legalInfo": "Legal information",
+    "legalMentions": "Legal notice",
+    "privacyPolicy": "Privacy policy",
+    "cookieManagement": "Cookie management",
+    "allRightsReserved": "All rights reserved.",
+    "designedWithCare": "Practice based on current scientific recommendations."
+  },
+  "cta": {
+    "title": "Personalized support at every stage",
+    "subtitle": "Book your appointment for a complete clinical assessment and a tailored treatment plan.",
+    "button": "Book an Appointment",
+    "whatsapp": "WhatsApp"
+  },
+  "stats": {
+    "yearsExperience": "Combined years of experience",
+    "satisfiedPatients": "Patients followed",
+    "googleReviews": "Patient reviews",
+    "modernEquipment": "Multidisciplinary practice",
+    "qualityCommitment": "Scientific commitment"
+  },
+  "whatsappButton": {
+    "message": "Hello, I would like to book an appointment for a consultation.",
+    "tooltip": "Chat on WhatsApp",
+    "aria": "Contact the practice on WhatsApp"
+  },
+  "home": {
+    "hero": {
+      "title": "Our dental practice:<br/> <span class=\"font-signature text-5xl md:text-7xl text-primary-500 block mt-2\">the continuity of an ancient medical art</span>",
+      "subtitle": "Since its millenary origins, dental medicine has evolved with one constant goal: preserving the health, function, and quality of life of today's patient.",
+      "bookAppointment": "Book an Appointment",
+      "emergency": "Need a quick opinion?",
+      "contactUs": "Contact us",
+      "yourHealthPriority": "Patient-centered care",
+      "callUs": "Call us:"
+    },
+    "intro": {
+      "slogan": "Medical expertise, current technology, and a trusted relationship.",
+      "title": "Our practice is part of this historical continuity with a modern vision, grounded in current scientific evidence and individualized care.",
+      "description": "Each specialty is approached with a rigorous diagnosis, clear patient information, and multidisciplinary coordination whenever needed.",
+      "learnMore": "Read our care philosophy",
+      "extendedDescription": "Beyond specialties, we are committed to attentive listening, personalized and evolving treatment plans, evidence-based practice, and a lasting relationship of trust."
+    },
+    "media": {
+      "dentist": "Dentist in consultation",
+      "chair": "Dental treatment chair",
+      "heroPatient": "Smiling patient",
+      "introOne": "Dental team at the practice",
+      "introTwo": "Clinical dental care",
+      "child": "Smiling patient",
+      "doctor": "Practice clinician"
+    },
+    "whyChooseUs": {
+      "title": "Our clinical approach",
+      "items": {
+        "tech": {
+          "title": "Maximum preservation",
+          "desc": "The natural tooth is always prioritized whenever conservative treatment is clinically possible."
+        },
+        "painless": {
+          "title": "Evidence-based medicine",
+          "desc": "Materials and protocols are selected according to current scientific evidence."
+        },
+        "transparency": {
+          "title": "Clear information",
+          "desc": "Every indication is explained transparently, including alternatives and postoperative expectations."
+        },
+        "expertTeam": {
+          "title": "Long-term follow-up",
+          "desc": "Regular follow-up is organized to maintain functional and biological outcomes over time."
+        }
+      }
+    },
+    "everythingYouNeed": {
+      "title": "A practice <span class=\"font-medium\">centered on the patient</span>",
+      "subtitle": "Comprehensive and evolving care",
+      "items": [
+        "Attentive listening and dedicated explanation time",
+        "Personalized and coordinated treatment plans",
+        "Orthodontics, conservative care, surgery, and implantology in one practice",
+        "Benefit-risk assessment before any intervention",
+        "Relapse prevention and long-term stability"
+      ],
+      "more": "Each therapeutic decision is tailored to your clinical situation."
+    },
+    "services": {
+      "expertise": "Our specialties",
+      "title": "Modern and reasoned dentistry",
+      "allServices": "View all specialties",
+      "learnMore": "View details"
+    },
+    "team": {
+      "subtitle": "Medical team",
+      "title": "Committed clinicians and an attentive front-desk team",
+      "viewAll": "Meet the full team",
+      "members": [
+        {
+          "name": "Dr Awatif Zaki Ziraoui",
+          "role": "Orthodontist"
+        },
+        {
+          "name": "Dr Nawar Dellero",
+          "role": "General dental surgeon"
+        },
+        {
+          "name": "Ilham",
+          "role": "Front desk assistant"
+        }
+      ]
+    },
+    "quote": {
+      "text": "\"The continuity of an ancient medical art, serving today's patient.\"",
+      "author": "Practice philosophy"
+    },
+    "testimonials": {
+      "text": "Rigorous clinical diagnosis, function, balance, and long-term stability.",
+      "note": "Multidisciplinary approach based on current scientific recommendations.",
+      "rateUs": "Read our reviews on",
+      "recent": "Recently updated",
+      "goToReview": "Go to review {{number}}",
+      "googleAlt": "Google logo",
+      "reviews": [
+        {
+          "name": "Orthodontics",
+          "text": "Multi-bracket therapy and clear aligners are selected according to medical indication.",
+          "rating": 5
+        },
+        {
+          "name": "Conservative care",
+          "text": "Maximum preservation of natural teeth through minimally invasive dentistry.",
+          "rating": 5
+        },
+        {
+          "name": "Dental surgery",
+          "text": "Procedures are performed according to current medical protocols after benefit-risk assessment.",
+          "rating": 5
+        },
+        {
+          "name": "Implantology",
+          "text": "Precise planning integrated into the global prosthetic project, with alternatives discussed.",
+          "rating": 5
+        }
+      ]
+    }
+  },
+  "about": {
+    "media": {
+      "heroImage": "Modern dental practice",
+      "approachImage": "Dental procedure at chairside"
+    },
+    "hero": {
+      "subtitle": "OUR VISION",
+      "title": "The continuity of an ancient medical art <br/> <span class=\"font-bold\">in the service of today's patient</span>",
+      "description": "Since Antiquity, dental medicine has evolved to preserve health, function, and quality of life. Our practice extends this history through modern, individualized, and scientifically grounded care."
+    },
+    "mission": {
+      "title": "Our commitment",
+      "description": "Combining medical expertise, current technology, and a trusted relationship to deliver precise, clear, and durable care.",
+      "items": {
+        "benevolence": {
+          "title": "Listening",
+          "desc": "Dedicated explanation time for each patient and family."
+        },
+        "excellence": {
+          "title": "Clinical rigor",
+          "desc": "Comprehensive diagnosis, occlusal analysis, and personalized planning."
+        },
+        "safety": {
+          "title": "Reasoned decisions",
+          "desc": "Benefit-risk assessment and multidisciplinary coordination before each procedure."
+        }
+      }
+    },
+    "approach": {
+      "quote": "\"Function, balance, and long-term stability.\"",
+      "subtitle": "CARE PATHWAY",
+      "title": "A care process <br/> <span class=\"font-bold\">coordinated and evolving</span>",
+      "steps": {
+        "1": {
+          "title": "Comprehensive clinical assessment",
+          "desc": "Clinical and functional analysis with imaging to define an accurate indication."
+        },
+        "2": {
+          "title": "Personalized treatment plan",
+          "desc": "Therapeutic choices are explained, including alternatives and long-term goals."
+        },
+        "3": {
+          "title": "Follow-up and prevention",
+          "desc": "Regular reviews, adjustments, and relapse prevention over time."
+        }
+      }
+    }
+  },
+  "servicesPage": {
+    "hero": {
+      "title": "Our specialties",
+      "description": "Each specialty is approached with a modern vision, grounded in current scientific evidence and individualized care."
+    },
+    "media": {
+      "heroImage": "Clinical dental consultation",
+      "ctaImage": "Practice clinician"
+    },
+    "categories": {
+      "surgery": "Dental surgery",
+      "esthetic": "Dental esthetics",
+      "orthodontics": "Orthodontics",
+      "general": "Conservative care",
+      "implantology": "Implantology"
+    },
+    "descriptions": {
+      "surgery": "From emergency extraction to reasoned surgery: current protocols, clear information, and interdisciplinary coordination.",
+      "esthetic": "Harmonious smile enhancement that respects biology and dental tissues.",
+      "orthodontics": "Preventive and corrective orthodontic care for children, teenagers, and adults.",
+      "general": "Preserving the natural tooth through conservative and minimally invasive dentistry.",
+      "implantology": "Replacing missing teeth with rigorous planning and discussion of alternatives."
+    },
+    "cards": [
+      {
+        "category": "Conservative care",
+        "title": "Preserving the natural tooth: an old principle, a modern standard",
+        "description": "From empirical recipes in Antiquity to the first fillings described by Pierre Fauchard in the 18th century, conservative dentistry gradually became a scientific discipline.",
+        "offerings": [
+          "Maximum preservation of natural teeth",
+          "Modern materials validated by scientific evidence",
+          "Patient comfort and clear explanation of treatments",
+          "Regular follow-up to maintain oral health"
+        ]
+      },
+      {
+        "category": "Orthodontics",
+        "title": "Correct, support, stabilize",
+        "description": "From empirical alignment attempts in Antiquity to a structured specialty in the 20th century, orthodontics now integrates biomechanics, craniofacial growth, and digital tools.",
+        "offerings": [
+          "Comprehensive orthodontic assessment adapted to age",
+          "Preventive care in children and corrective care in adults",
+          "Braces and clear aligners selected by indication",
+          "Focus on stability and relapse prevention"
+        ]
+      },
+      {
+        "category": "Dental surgery",
+        "title": "From emergency extraction to reasoned surgery",
+        "description": "Anesthesia, asepsis, and modern imaging transformed dental surgery into a controlled discipline integrated into global treatment plans.",
+        "offerings": [
+          "Procedures performed under current medical protocols",
+          "Precise benefit-risk assessment",
+          "Clear information about indications and postoperative care",
+          "Coordination with other specialties when required"
+        ]
+      },
+      {
+        "category": "Implantology",
+        "title": "Replacing missing teeth: a major 20th-century advance",
+        "description": "Modern implantology is based on titanium osseointegration discovered by Branemark in the 1950s, transforming the management of edentulism.",
+        "offerings": [
+          "Rigorous medical evaluation before implant indication",
+          "Planning integrated into the global prosthetic project",
+          "Complete information about available alternatives",
+          "Prudent approach based on current scientific data"
+        ]
+      },
+      {
+        "category": "Dental esthetics",
+        "title": "When function meets smile harmony",
+        "description": "Modern dental esthetics aims for natural smile enhancement, not artificial transformation, while respecting biology.",
+        "offerings": [
+          "Reasoned esthetic approach respectful of tissues",
+          "Smile analysis integrated with facial and functional balance",
+          "Solutions adapted to expectations without standardization",
+          "Guidance in selecting esthetic treatment options"
+        ]
+      }
+    ],
+    "learnMore": "Book an appointment",
+    "cta": {
+      "subtitle": "CARE PHILOSOPHY",
+      "title": "A dentistry that is <br/> human, modern, <br/> and personalized",
+      "description": "Our group practice combines orthodontics, general dentistry, surgery, and implantology for coherent, prudent, and durable care.",
+      "button": "Book an Appointment"
+    }
+  },
+  "gallery": {
+    "hero": {
+      "subtitle": "PATHWAY",
+      "title": "From the history of dental medicine <br/> <span class=\"font-bold\">to today's clinical practice</span>",
+      "description": "Every field in our practice follows the same direction: protect function, respect biology, and secure long-term stability."
+    },
+    "categories": {
+      "orthodontics": "Orthodontics",
+      "esthetic": "Esthetics",
+      "implantology": "Implantology",
+      "general": "Conservative care"
+    },
+    "cases": {
+      "1": {
+        "title": "Conservative care",
+        "desc": "From pain relief in Antiquity to minimally invasive dentistry today."
+      },
+      "2": {
+        "title": "Child orthodontics",
+        "desc": "Preventive and interceptive approach during growth to guide function."
+      },
+      "3": {
+        "title": "Adult orthodontics",
+        "desc": "Braces and clear aligners selected according to medical indication."
+      },
+      "4": {
+        "title": "Dental surgery",
+        "desc": "Procedures integrated into global plans with reasoned indications and current protocols."
+      },
+      "5": {
+        "title": "Modern implantology",
+        "desc": "Global prosthetic planning with full discussion of alternatives."
+      },
+      "6": {
+        "title": "Dental esthetics",
+        "desc": "Smile harmony achieved with respect for tissues and function."
+      }
+    },
+    "before": "Historical context",
+    "after": "Current practice",
+    "allCases": "Our clinical care domains",
+    "explore": "Explore the main clinical pillars of our group practice.",
+    "placeholders": {
+      "before": "Historical reference",
+      "after": "Clinical application"
+    },
+    "navigation": {
+      "previous": "Previous item",
+      "next": "Next item",
+      "goToCase": "Go to domain {{number}}"
+    },
+    "cta": {
+      "title": "Would you like a <span class=\"font-bold\">personalized opinion?</span>",
+      "button": "Book an Appointment"
+    }
+  },
+  "teamPage": {
+    "hero": {
+      "title": "Our smile dream team",
+      "description": "The practice brings together an orthodontist, a general dental surgeon, and a dedicated assistant team for comprehensive and multidisciplinary care."
+    },
+    "members": [
+      {
+        "name": "Dr Awatif Zaki Ziraoui",
+        "role": "Orthodontist - Registration no. 3121",
+        "description": "State Doctor in Dental Surgery, graduate of the University of Monastir, and former hospital fellow in Liege. She manages orthodontic care for children, adolescents, and adults, including clear aligners, sleep-disordered breathing support, and functional TMJ evaluation."
+      },
+      {
+        "name": "Dr Nawar Dellero",
+        "role": "General dental surgeon - Registration no. 6429",
+        "description": "Doctor of Dental Medicine, graduated from the Faculty of Dental Medicine of Rabat, Mohammed V University. Her practice is built on prevention, precise diagnosis, conservative care, periodontology, prosthetics, and smile esthetics, in coordination with the other specialties."
+      },
+      {
+        "name": "Ilham",
+        "role": "Front desk assistant",
+        "description": "Always smiling and attentive, she ensures warm reception, rigorous administrative follow-up, and reliable appointment reminders for each patient."
+      },
+      {
+        "name": "Ghizlane",
+        "role": "Chairside assistant",
+        "description": "Experienced in orthodontics, she supports care with kindness, reassures patients, and explains each treatment step with patience."
+      },
+      {
+        "name": "Loubna",
+        "role": "Chairside assistant",
+        "description": "Gentle, discreet, and efficient, she contributes to smooth care with warm and reassuring professionalism."
+      }
+    ],
+    "viewProfile": "Contact us",
+    "cta": {
+      "title": "A team <br/> <span class=\"font-medium\">coordinated around the patient</span>",
+      "description": "Each treatment plan is based on rigorous clinical diagnosis, analysis of occlusion, function and growth, and clear information for the patient or family."
+    }
+  },
+  "contact": {
+    "hero": {
+      "subtitle": "CONTACT",
+      "title": "A team <br/> <span class=\"font-bold\">ready to listen</span>",
+      "description": "Need an assessment, orthodontic care, conservative treatment, surgery, or implantology? Our group practice supports you with clear information and personalized treatment planning."
+    },
+    "info": {
+      "title": "Practice contact details",
+      "address": "Address",
+      "fullAddress": "836 boulevard El Qods, 2nd floor\n20480 Casablanca, Morocco",
+      "phone": "Phone",
+      "phoneValue": "+212 522 21 35 66",
+      "email": "Email",
+      "emailValue": "contact@mandarona.ma",
+      "hours": {
+        "title": "Opening hours",
+        "week": "Monday - Friday",
+        "weekValue": "09:00 - 19:00",
+        "saturday": "Saturday",
+        "saturdayValue": "09:00 - 13:00",
+        "sunday": "Sunday",
+        "closed": "Closed"
+      }
+    },
+    "form": {
+      "title": "Send us <span class=\"font-bold\">your request</span>",
+      "name": "Full name",
+      "namePlaceholder": "Your name",
+      "phone": "Phone",
+      "phonePlaceholder": "Your number",
+      "email": "Email",
+      "emailPlaceholder": "your@email.com",
+      "subject": "Subject",
+      "subjects": {
+        "consultation": "General consultation",
+        "orthodontics": "Orthodontics",
+        "esthetic": "Dental esthetics",
+        "implants": "Implantology",
+        "emergency": "Surgery / emergency"
+      },
+      "message": "Message",
+      "messagePlaceholder": "Please describe your needs and expectations.",
+      "submit": "Send request",
+      "sending": "Sending...",
+      "success": "Message sent successfully. We will get back to you shortly."
+    },
+    "map": {
+      "title": "Dental practice - Casablanca"
+    }
+  },
+  "conseilsPage": {
+    "hero": {
+      "title": "A patient-centered care philosophy",
+      "description": "Beyond specialties, our practice is structured around four clinical principles that guide every treatment plan."
+    },
+    "items": {
+      "brushing": {
+        "title": "Attentive listening",
+        "description": "Dedicated explanation time is included in every consultation to understand the patient's needs, priorities, and medical context."
+      },
+      "flossing": {
+        "title": "Personalized treatment plans",
+        "description": "Each plan is evolving, coordinated across specialties, and adapted to age, function, and long-term stability goals."
+      },
+      "diet": {
+        "title": "Scientific recommendations",
+        "description": "Our treatment indications rely on current scientific evidence, with benefit-risk assessment before any intervention."
+      },
+      "visits": {
+        "title": "Durable relationship of trust",
+        "description": "Regular follow-up and clear information help maintain oral health, prevent relapse, and support patients over time."
+      }
+    }
+  }
+}
