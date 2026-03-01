@@ -1,7 +1,7 @@
 import { useState, useEffect } from 'react';
 import { Link, useLocation } from 'react-router-dom';
 import { motion, AnimatePresence } from 'framer-motion';
-import { FaBars, FaTimes, FaPhoneAlt, FaWhatsapp } from 'react-icons/fa';
+import { FaBars, FaTimes, FaWhatsapp } from 'react-icons/fa';
 import { useTranslation } from 'react-i18next';
 import LogoIcon from '../assets/icon.png';
 
@@ -41,6 +41,7 @@ const Header = () => {
   const navLinks = [
     { path: '/', label: t('header.home') },
     { path: '/equipe', label: t('header.team') },
+    { path: '/conseils', label: t('header.advice') },
     { path: '/services', label: t('header.services') },
     { path: '/avant-apres', label: t('header.beforeAfter') }
   ];
@@ -93,7 +94,6 @@ const Header = () => {
             </div>
             <a href="https://wa.me/212522213566" target="_blank" rel="noopener noreferrer" className="flex items-center gap-2 text-gray-600 hover:text-primary-600 font-medium transition-colors">
               <FaWhatsapp className="text-xl" />
-              <span className="hidden xl:inline">+212 522 21 35 66</span>
             </a>
 
             <Link to="/contact" className="bg-primary-light-pink text-gray-900 px-6 py-3 rounded-full font-bold hover:bg-primary-200 transition-all shadow-lg hover:shadow-primary-200 transform hover:-translate-y-0.5">
@@ -152,10 +152,6 @@ const Header = () => {
                 animate={{ opacity: 1 }}
                 transition={{ delay: 0.3 }}
               >
-                <a href="tel:+212522213566" className="flex items-center justify-center gap-3 text-gray-600 font-bold text-lg">
-                  <FaPhoneAlt className="text-primary-600" />
-                  <span>+212 522 21 35 66</span>
-                </a>
                 <Link to="/contact" className="btn bg-primary-light-pink text-gray-900 w-full justify-center rounded-xl font-bold hover:bg-primary-200 py-4 shadow-lg" onClick={() => setIsMobileMenuOpen(false)}>
                   {t('header.bookAppointment')}
                 </Link>

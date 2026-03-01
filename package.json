@@ -4,10 +4,11 @@
   "version": "0.0.0",
   "type": "module",
   "scripts": {
-    "dev": "vite",
-    "build": "vite build",
+    "dev": "vite --host --port 5173 --strictPort",
+    "clean": "rm -rf dist node_modules/.vite",
+    "build": "npm run clean && vite build --emptyOutDir",
     "lint": "eslint .",
-    "preview": "vite preview"
+    "preview": "npm run build && vite preview --host --port 4173 --strictPort"
   },
   "dependencies": {
     "framer-motion": "^12.23.24",

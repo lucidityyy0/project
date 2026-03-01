@@ -2,7 +2,7 @@
   "header": {
     "home": "Home",
     "team": "Team",
-    "advice": "Philosophy",
+    "advice": "Advice",
     "services": "Care",
     "beforeAfter": "Gallery",
     "contact": "Contact",
@@ -53,6 +53,10 @@
       "yourHealthPriority": "Patient-centered care",
       "callUs": "Call us:"
     },
+    "slider": {
+      "secondTitle": "A modern and personalized approach",
+      "secondSubtitle": "Science-based care, multidisciplinary coordination, and a trusted patient relationship."
+    },
     "intro": {
       "slogan": "Medical expertise, current technology, and a trusted relationship.",
       "title": "Our practice is part of this historical continuity with a modern vision, grounded in current scientific evidence and individualized care.",
@@ -67,7 +71,8 @@
       "introOne": "Dental team at the practice",
       "introTwo": "Clinical dental care",
       "child": "Smiling patient",
-      "doctor": "Practice clinician"
+      "doctor": "Practice clinician",
+      "teamGroup": "Team group photo"
     },
     "whyChooseUs": {
       "title": "Our clinical approach",
@@ -112,6 +117,8 @@
       "subtitle": "Medical team",
       "title": "Committed clinicians and an attentive front-desk team",
       "viewAll": "Meet the full team",
+      "supportTitle": "Support team",
+      "supportSubtitle": "This image will be replaced with your group photo.",
       "members": [
         {
           "name": "Dr Awatif Zaki Ziraoui",

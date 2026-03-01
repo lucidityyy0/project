@@ -2,7 +2,7 @@
   "header": {
     "home": "Acceuil",
     "team": "Equipe",
-    "advice": "Philosophie",
+    "advice": "Conseil",
     "services": "Soins",
     "beforeAfter": "Gallerie",
     "contact": "Contact",
@@ -53,6 +53,10 @@
       "yourHealthPriority": "Prise en charge centree sur le patient",
       "callUs": "Appelez-nous :"
     },
+    "slider": {
+      "secondTitle": "Une vision moderne et personnalisee",
+      "secondSubtitle": "Soins fondes sur la science, coordination pluridisciplinaire et relation de confiance."
+    },
     "intro": {
       "slogan": "Savoir medical, technologies actuelles et relation de confiance.",
       "title": "Notre cabinet s'inscrit dans cette continuite historique avec une vision moderne, fondee sur les donnees scientifiques actuelles et une prise en charge individualisee.",
@@ -67,7 +71,8 @@
       "introOne": "Equipe dentaire au cabinet",
       "introTwo": "Soin clinique en cours",
       "child": "Patient souriant",
-      "doctor": "Praticienne du cabinet"
+      "doctor": "Praticienne du cabinet",
+      "teamGroup": "Photo de groupe de l'equipe"
     },
     "whyChooseUs": {
       "title": "Notre approche clinique",
@@ -112,6 +117,8 @@
       "subtitle": "L'equipe medicale",
       "title": "Des praticiennes engagees et une equipe d'accueil attentive",
       "viewAll": "Decouvrir toute l'equipe",
+      "supportTitle": "Equipe support",
+      "supportSubtitle": "Cette image sera remplacee par votre photo de groupe.",
       "members": [
         {
           "name": "Dr Awatif Zaki Ziraoui",

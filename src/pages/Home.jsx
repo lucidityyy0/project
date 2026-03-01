@@ -30,8 +30,8 @@ const Home = () => {
       image: bannerImages[0]
     },
     {
-      title: t('home.intro.title'),
-      subtitle: t('home.intro.description'),
+      title: t('home.slider.secondTitle'),
+      subtitle: t('home.slider.secondSubtitle'),
       image: bannerImages[1]
     },
     {
@@ -50,7 +50,9 @@ const Home = () => {
 
   const translatedTeamMembers = t('teamPage.members', { returnObjects: true });
   const teamMembers = Array.isArray(translatedTeamMembers) ? translatedTeamMembers : [];
-  const teamImages = [NabilaImg, HassanImg, BenjellounImg, DirarImg, 'https://images.unsplash.com/photo-1537368910025-700350fe46c7?auto=format&fit=crop&w=1000&q=80'];
+  const mainDoctors = teamMembers.slice(0, 2);
+  const supportTeam = teamMembers.slice(2);
+  const mainDoctorImages = [NabilaImg, HassanImg];
 
   useEffect(() => {
     if (!bannerSlides.length) return undefined;
@@ -98,7 +100,7 @@ const Home = () => {
         <div className="relative container mx-auto px-4 sm:px-6 lg:px-8 h-full flex flex-col justify-end pb-10 sm:pb-14">
           <div className="max-w-3xl text-white">
             <h1
-              className="text-3xl sm:text-4xl lg:text-6xl font-light leading-[1.1] mb-6"
+              className="text-2xl sm:text-3xl lg:text-5xl font-light leading-[1.1] mb-6"
               dangerouslySetInnerHTML={{ __html: activeSlide.title }}
             />
             <p className="text-base sm:text-lg text-white/90 leading-relaxed max-w-2xl mb-8">
@@ -146,22 +148,109 @@ const Home = () => {
         </div>
       </section>
 
+      {/* Testimonials */}
+      <section className="py-16 lg:py-20 bg-gray-50 overflow-hidden">
+        <div className="container mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center mb-12">
+            <h2 className="text-2xl lg:text-4xl font-light text-gray-900 mb-4">
+              {t('home.testimonials.text')}
+            </h2>
+          </div>
+
+          <div className="flex flex-col lg:flex-row items-center justify-center gap-8 lg:gap-12 max-w-6xl mx-auto">
+            {/* Left: Rating Card */}
+            <div className="bg-white p-10 rounded-[2.5rem] shadow-xl w-full lg:w-1/3 flex flex-col items-center text-center relative z-10">
+              <div className="w-20 h-20 bg-gray-50 rounded-full flex items-center justify-center mb-6">
+                <img src={GoogleLogo} alt={t('home.testimonials.googleAlt')} className="w-10 h-10 object-contain" />
+              </div>
+              <h3 className="text-2xl font-bold text-gray-900 mb-2">{t('header.brandName')}</h3>
+              <div className="flex items-center gap-2 mb-2">
+                <span className="text-4xl font-bold text-gray-900">4.9</span>
+                <div className="flex text-yellow-400 text-xl">
+                  {[1, 2, 3, 4, 5].map(i => <FaStar key={i} />)}
+                </div>
+              </div>
+              <p className="text-gray-500 text-sm mb-8">{t('home.testimonials.note')}</p>
+
+              <a href="https://g.page/r/..." target="_blank" rel="noopener noreferrer" className="bg-blue-600 text-white px-8 py-3 rounded-full font-medium hover:bg-blue-700 transition-colors shadow-lg shadow-blue-200 flex items-center gap-2">
+                <span className="text-sm">{t('home.testimonials.rateUs')}</span>
+                <img src="https://www.gstatic.com/images/branding/googlelogo/svg/googlelogo_light_clr_74x24px.svg" alt={t('home.testimonials.googleAlt')} className="h-5 opacity-90" />
+              </a>
+            </div>
+
+            {/* Right: Carousel */}
+            <div className="w-full lg:w-2/3 relative min-h-[360px] lg:h-[320px] flex flex-col">
+              <AnimatePresence mode="wait">
+                <motion.div
+                  key={currentReviewIndex}
+                  initial={{ opacity: 0, x: 50 }}
+                  animate={{ opacity: 1, x: 0 }}
+                  exit={{ opacity: 0, x: -50 }}
+                  transition={{ duration: 0.5 }}
+                  className="absolute inset-0"
+                >
+                  <div className="bg-white p-10 rounded-[2.5rem] shadow-lg h-full flex flex-col justify-center relative">
+                    <div className="absolute top-8 right-8">
+                      <img src={GoogleLogo} alt={t('home.testimonials.googleAlt')} className="w-8 h-8 opacity-50" />
+                    </div>
+
+                    <div className="flex items-center gap-6 mb-8">
+                      <div className="w-20 h-20 rounded-full overflow-hidden border-4 border-gray-50 shadow-sm flex-shrink-0">
+                        {reviewImages[currentReviewIndex] ? (
+                          <img src={reviewImages[currentReviewIndex]} alt={activeReview.name} className="w-full h-full object-cover" />
+                        ) : (
+                          <div className="w-full h-full bg-primary-50 flex items-center justify-center text-primary-300 font-bold text-2xl">
+                            {activeReview.name?.charAt(0)}
+                          </div>
+                        )}
+                      </div>
+                      <div>
+                        <h4 className="text-xl font-bold text-gray-900 mb-1">{activeReview.name}</h4>
+                        <div className="flex text-yellow-400 text-sm mb-1">
+                          {[...Array(activeReview.rating || 5)].map((_, i) => <FaStar key={i} />)}
+                        </div>
+                        <p className="text-gray-400 text-xs">{t('home.testimonials.recent')}</p>
+                      </div>
+                    </div>
+
+                    <p className="text-gray-600 text-lg leading-relaxed italic">
+                      "{activeReview.text}"
+                    </p>
+                  </div>
+                </motion.div>
+              </AnimatePresence>
+
+              <div className="absolute -bottom-12 left-0 right-0 flex justify-center gap-3">
+                {reviews.map((_, index) => (
+                  <button
+                    key={index}
+                    onClick={() => setCurrentReviewIndex(index)}
+                    className={`w-3 h-3 rounded-full transition-all duration-300 ${index === currentReviewIndex ? 'bg-primary-600 w-8' : 'bg-gray-300 hover:bg-primary-300'}`}
+                    aria-label={t('home.testimonials.goToReview', { number: index + 1 })}
+                  />
+                ))}
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
       {/* Alternating Team Section */}
       <section className="py-20 lg:py-28 bg-white">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center max-w-3xl mx-auto mb-14">
             <span className="uppercase tracking-[0.2em] text-xs font-semibold text-gray-400">{t('home.team.subtitle')}</span>
-            <h2 className="text-3xl lg:text-5xl font-light text-gray-900 mt-4 leading-tight">{t('home.team.title')}</h2>
+            <h2 className="text-3xl lg:text-4xl font-light text-gray-900 mt-4 leading-tight">{t('home.team.title')}</h2>
           </div>
 
           <div className="space-y-12 lg:space-y-16">
-            {teamMembers.map((member, index) => {
+            {mainDoctors.map((member, index) => {
               const reversed = index % 2 === 1;
               return (
                 <article key={index} className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-12 items-center">
                   <div className={reversed ? 'lg:order-2' : ''}>
                     <div className="rounded-[2rem] overflow-hidden shadow-xl h-[250px] sm:h-[300px] lg:h-[360px] bg-gray-100">
-                      <img src={teamImages[index % teamImages.length]} alt={member.name} className="w-full h-full object-cover" />
+                      <img src={mainDoctorImages[index % mainDoctorImages.length]} alt={member.name} className="w-full h-full object-cover" />
                     </div>
                   </div>
 
@@ -175,6 +264,29 @@ const Home = () => {
                 </article>
               );
             })}
+          </div>
+
+          <div className="mt-12 lg:mt-16 max-w-5xl mx-auto">
+            <div className="rounded-[2rem] overflow-hidden shadow-xl h-[260px] sm:h-[320px] lg:h-[420px] bg-gray-100">
+              <img
+                src="https://images.unsplash.com/photo-1556761175-5973dc0f32e7?auto=format&fit=crop&w=1600&q=80"
+                alt={t('home.media.teamGroup')}
+                className="w-full h-full object-cover"
+              />
+            </div>
+
+            <div className="mt-6">
+              <h3 className="text-xl sm:text-2xl font-light text-gray-900 mb-3">{t('home.team.supportTitle')}</h3>
+              <p className="text-sm text-gray-500 mb-5">{t('home.team.supportSubtitle')}</p>
+              <div className="grid grid-cols-1 sm:grid-cols-3 gap-4">
+                {supportTeam.map((member, index) => (
+                  <div key={index} className="bg-gray-50 border border-gray-100 rounded-xl px-4 py-3">
+                    <p className="text-sm font-semibold text-gray-900">{member.name}</p>
+                    <p className="text-xs text-gray-500 mt-1">{member.role}</p>
+                  </div>
+                ))}
+              </div>
+            </div>
           </div>
 
           <div className="text-center mt-14">
@@ -191,7 +303,7 @@ const Home = () => {
           <div className="flex flex-col md:flex-row justify-between items-end mb-16 gap-6">
             <div>
               <span className="uppercase tracking-[0.2em] text-xs font-medium text-primary-300 mb-4 block">{t('home.services.expertise')}</span>
-              <h2 className="text-4xl lg:text-5xl font-light">{t('home.services.title')}</h2>
+              <h2 className="text-3xl lg:text-4xl font-light">{t('home.services.title')}</h2>
             </div>
             <Link to="/services" className="hidden md:inline-block text-white border-b border-white/30 pb-1 hover:text-primary-200 hover:border-primary-200 transition-colors">
               {t('home.services.allServices')}
@@ -312,7 +424,7 @@ const Home = () => {
               </div>
             </div>
             <div className="lg:w-1/2 lg:pl-10">
-              <h2 className="text-4xl lg:text-5xl font-light text-gray-900 mb-6 leading-tight" dangerouslySetInnerHTML={{ __html: t('home.everythingYouNeed.title') }} />
+              <h2 className="text-3xl lg:text-4xl font-light text-gray-900 mb-6 leading-tight" dangerouslySetInnerHTML={{ __html: t('home.everythingYouNeed.title') }} />
               <p className="text-gray-500 mb-10">{t('home.everythingYouNeed.subtitle')}</p>
 
               <ul className="space-y-6">
@@ -368,92 +480,6 @@ const Home = () => {
         </div>
       </section>
 
-      {/* Testimonials */}
-      <section className="py-20 lg:py-28 bg-gray-50 overflow-hidden">
-        <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-16">
-            <h2 className="text-3xl lg:text-5xl font-light text-gray-900 mb-4">
-              {t('home.testimonials.text')}
-            </h2>
-          </div>
-
-          <div className="flex flex-col lg:flex-row items-center justify-center gap-8 lg:gap-12 max-w-6xl mx-auto">
-            {/* Left: Rating Card */}
-            <div className="bg-white p-10 rounded-[2.5rem] shadow-xl w-full lg:w-1/3 flex flex-col items-center text-center relative z-10">
-              <div className="w-20 h-20 bg-gray-50 rounded-full flex items-center justify-center mb-6">
-                <img src={GoogleLogo} alt={t('home.testimonials.googleAlt')} className="w-10 h-10 object-contain" />
-              </div>
-              <h3 className="text-2xl font-bold text-gray-900 mb-2">{t('header.brandName')}</h3>
-              <div className="flex items-center gap-2 mb-2">
-                <span className="text-4xl font-bold text-gray-900">4.9</span>
-                <div className="flex text-yellow-400 text-xl">
-                  {[1, 2, 3, 4, 5].map(i => <FaStar key={i} />)}
-                </div>
-              </div>
-              <p className="text-gray-500 text-sm mb-8">{t('home.testimonials.note')}</p>
-
-              <a href="https://g.page/r/..." target="_blank" rel="noopener noreferrer" className="bg-blue-600 text-white px-8 py-3 rounded-full font-medium hover:bg-blue-700 transition-colors shadow-lg shadow-blue-200 flex items-center gap-2">
-                <span className="text-sm">{t('home.testimonials.rateUs')}</span>
-                <img src="https://www.gstatic.com/images/branding/googlelogo/svg/googlelogo_light_clr_74x24px.svg" alt={t('home.testimonials.googleAlt')} className="h-5 opacity-90" />
-              </a>
-            </div>
-
-            {/* Right: Carousel */}
-            <div className="w-full lg:w-2/3 relative min-h-[360px] lg:h-[320px] flex flex-col">
-              <AnimatePresence mode="wait">
-                <motion.div
-                  key={currentReviewIndex}
-                  initial={{ opacity: 0, x: 50 }}
-                  animate={{ opacity: 1, x: 0 }}
-                  exit={{ opacity: 0, x: -50 }}
-                  transition={{ duration: 0.5 }}
-                  className="absolute inset-0"
-                >
-                  <div className="bg-white p-10 rounded-[2.5rem] shadow-lg h-full flex flex-col justify-center relative">
-                    <div className="absolute top-8 right-8">
-                      <img src={GoogleLogo} alt={t('home.testimonials.googleAlt')} className="w-8 h-8 opacity-50" />
-                    </div>
-
-                    <div className="flex items-center gap-6 mb-8">
-                      <div className="w-20 h-20 rounded-full overflow-hidden border-4 border-gray-50 shadow-sm flex-shrink-0">
-                        {reviewImages[currentReviewIndex] ? (
-                          <img src={reviewImages[currentReviewIndex]} alt={activeReview.name} className="w-full h-full object-cover" />
-                        ) : (
-                          <div className="w-full h-full bg-primary-50 flex items-center justify-center text-primary-300 font-bold text-2xl">
-                            {activeReview.name?.charAt(0)}
-                          </div>
-                        )}
-                      </div>
-                      <div>
-                        <h4 className="text-xl font-bold text-gray-900 mb-1">{activeReview.name}</h4>
-                        <div className="flex text-yellow-400 text-sm mb-1">
-                          {[...Array(activeReview.rating || 5)].map((_, i) => <FaStar key={i} />)}
-                        </div>
-                        <p className="text-gray-400 text-xs">{t('home.testimonials.recent')}</p>
-                      </div>
-                    </div>
-
-                    <p className="text-gray-600 text-lg leading-relaxed italic">
-                      "{activeReview.text}"
-                    </p>
-                  </div>
-                </motion.div>
-              </AnimatePresence>
-
-              <div className="absolute -bottom-12 left-0 right-0 flex justify-center gap-3">
-                {reviews.map((_, index) => (
-                  <button
-                    key={index}
-                    onClick={() => setCurrentReviewIndex(index)}
-                    className={`w-3 h-3 rounded-full transition-all duration-300 ${index === currentReviewIndex ? 'bg-primary-600 w-8' : 'bg-gray-300 hover:bg-primary-300'}`}
-                    aria-label={t('home.testimonials.goToReview', { number: index + 1 })}
-                  />
-                ))}
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
     </div>
   );
 };
