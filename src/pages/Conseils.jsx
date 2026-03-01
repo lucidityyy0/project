@@ -30,13 +30,13 @@ const Conseils = () => {
     return (
         <div className="font-sans text-gray-800">
             {/* Hero Section */}
-            <section className="relative h-[400px] lg:h-[500px] overflow-hidden bg-primary-50">
+            <section className="relative h-[320px] sm:h-[400px] lg:h-[500px] overflow-hidden bg-primary-50">
                 <div className="container mx-auto px-4 h-full flex items-center justify-center">
                     <div className="text-center max-w-3xl">
                         <motion.h1
                             initial={{ opacity: 0, y: 20 }}
                             animate={{ opacity: 1, y: 0 }}
-                            className="text-4xl lg:text-6xl font-light text-gray-900 mb-6"
+                            className="text-3xl sm:text-4xl lg:text-6xl font-light text-gray-900 mb-4 sm:mb-6"
                         >
                             {t('conseilsPage.hero.title')}
                         </motion.h1>
@@ -44,7 +44,7 @@ const Conseils = () => {
                             initial={{ opacity: 0, y: 20 }}
                             animate={{ opacity: 1, y: 0 }}
                             transition={{ delay: 0.2 }}
-                            className="text-gray-600 text-lg leading-relaxed"
+                            className="text-gray-600 text-sm sm:text-base lg:text-lg leading-relaxed"
                         >
                             {t('conseilsPage.hero.description')}
                         </motion.p>
@@ -53,9 +53,9 @@ const Conseils = () => {
             </section>
 
             {/* Advice Grid */}
-            <section className="py-20 bg-white">
+            <section className="py-14 sm:py-20 bg-white">
                 <div className="container mx-auto px-4">
-                    <div className="grid grid-cols-1 md:grid-cols-2 gap-12">
+                    <div className="grid grid-cols-1 md:grid-cols-2 gap-8 sm:gap-12">
                         {adviceList.map((item, index) => (
                             <motion.div
                                 key={index}
@@ -63,18 +63,20 @@ const Conseils = () => {
                                 whileInView={{ opacity: 1, y: 0 }}
                                 viewport={{ once: true }}
                                 transition={{ delay: index * 0.1 }}
-                                className="flex flex-col md:flex-row gap-8 items-center bg-white rounded-2xl p-6 shadow-lg hover:shadow-xl transition-shadow"
+                                className="flex flex-col md:flex-row gap-6 sm:gap-8 items-center bg-white rounded-2xl p-5 sm:p-6 shadow-lg hover:shadow-xl transition-shadow"
                             >
                                 <div className="w-full md:w-1/3 h-48 rounded-xl overflow-hidden flex-shrink-0">
                                     <img
                                         src={item.image}
                                         alt={item.title}
                                         className="w-full h-full object-cover transition-transform duration-500 hover:scale-110"
+                                        loading="lazy"
+                                        decoding="async"
                                     />
                                 </div>
                                 <div className="w-full md:w-2/3">
-                                    <h3 className="text-2xl font-medium text-gray-900 mb-4">{item.title}</h3>
-                                    <p className="text-gray-600 leading-relaxed">{item.description}</p>
+                                    <h3 className="text-xl sm:text-2xl font-medium text-gray-900 mb-3 sm:mb-4">{item.title}</h3>
+                                    <p className="text-gray-600 text-sm sm:text-base leading-relaxed">{item.description}</p>
                                 </div>
                             </motion.div>
                         ))}

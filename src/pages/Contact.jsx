@@ -53,7 +53,7 @@ const Contact = () => {
   return (
     <div className="font-sans text-primary-600">
       {/* Hero Section */}
-      <section className="relative pt-32 pb-20 lg:pt-48 lg:pb-32 overflow-hidden bg-accent-50">
+      <section className="relative pt-24 sm:pt-32 pb-14 sm:pb-20 lg:pt-48 lg:pb-32 overflow-hidden bg-accent-50">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10 text-center">
           <motion.div
             initial={{ opacity: 0, y: 30 }}
@@ -63,8 +63,8 @@ const Contact = () => {
             <span className="uppercase tracking-widest text-sm font-semibold mb-4 block text-accent-500">
               {t('contact.hero.subtitle')}
             </span>
-            <h1 className="text-3xl md:text-5xl font-light mb-6 leading-tight" dangerouslySetInnerHTML={{ __html: t('contact.hero.title') }} />
-            <p className="text-base lg:text-lg text-gray-600 max-w-3xl mx-auto leading-relaxed">
+            <h1 className="text-2xl sm:text-3xl md:text-5xl font-light mb-6 leading-tight" dangerouslySetInnerHTML={{ __html: t('contact.hero.title') }} />
+            <p className="text-sm sm:text-base lg:text-lg text-gray-600 max-w-3xl mx-auto leading-relaxed">
               {t('contact.hero.description')}
             </p>
           </motion.div>
@@ -77,14 +77,14 @@ const Contact = () => {
       </section>
 
       {/* Contact Content */}
-      <section className="py-20">
+      <section className="py-14 sm:py-20">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-1 lg:grid-cols-3 gap-12">
 
             {/* Contact Info */}
             <div className="lg:col-span-1 space-y-8">
-              <div className="bg-primary-600 text-white p-8 rounded-[2rem] shadow-xl">
-                <h2 className="text-2xl font-bold mb-6">{t('contact.info.title')}</h2>
+              <div className="bg-primary-600 text-white p-6 sm:p-8 rounded-[2rem] shadow-xl">
+                <h2 className="text-xl sm:text-2xl font-bold mb-6">{t('contact.info.title')}</h2>
                 <div className="space-y-6">
                   <div className="flex items-start space-x-4">
                     <div className="w-10 h-10 bg-accent-500 text-primary-600 rounded-full flex items-center justify-center flex-shrink-0">
@@ -118,8 +118,8 @@ const Contact = () => {
                 </div>
               </div>
 
-              <div className="bg-accent-100 p-8 rounded-[2rem]">
-                <h3 className="text-xl font-bold mb-4 text-primary-600">{t('contact.info.hours.title')}</h3>
+              <div className="bg-accent-100 p-6 sm:p-8 rounded-[2rem]">
+                <h3 className="text-lg sm:text-xl font-bold mb-4 text-primary-600">{t('contact.info.hours.title')}</h3>
                 <ul className="space-y-3 text-gray-700">
                   <li className="flex justify-between">
                     <span>{t('contact.info.hours.week')}</span>
@@ -139,8 +139,8 @@ const Contact = () => {
 
             {/* Contact Form */}
             <div className="lg:col-span-2">
-              <div className="bg-white p-8 md:p-12 rounded-[3rem] shadow-2xl border border-gray-100">
-                <h2 className="text-3xl font-light mb-8 text-primary-600" dangerouslySetInnerHTML={{ __html: t('contact.form.title') }} />
+              <div className="bg-white p-6 sm:p-8 md:p-12 rounded-[2.2rem] sm:rounded-[3rem] shadow-2xl border border-gray-100">
+                <h2 className="text-2xl sm:text-3xl font-light mb-8 text-primary-600" dangerouslySetInnerHTML={{ __html: t('contact.form.title') }} />
 
                 <form onSubmit={handleSubmit} className="space-y-6">
                   <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
@@ -153,7 +153,7 @@ const Contact = () => {
                         value={formData.name}
                         onChange={handleChange}
                         required
-                        className="w-full px-6 py-4 bg-gray-50 border-none rounded-xl focus:ring-2 focus:ring-accent-500 transition-all outline-none"
+                        className="w-full px-5 sm:px-6 py-3.5 sm:py-4 bg-gray-50 border-none rounded-xl focus:ring-2 focus:ring-accent-500 transition-all outline-none"
                         placeholder={t('contact.form.namePlaceholder')}
                       />
                     </div>
@@ -166,7 +166,7 @@ const Contact = () => {
                         value={formData.phone}
                         onChange={handleChange}
                         required
-                        className="w-full px-6 py-4 bg-gray-50 border-none rounded-xl focus:ring-2 focus:ring-accent-500 transition-all outline-none"
+                        className="w-full px-5 sm:px-6 py-3.5 sm:py-4 bg-gray-50 border-none rounded-xl focus:ring-2 focus:ring-accent-500 transition-all outline-none"
                         placeholder={t('contact.form.phonePlaceholder')}
                       />
                     </div>
@@ -182,7 +182,7 @@ const Contact = () => {
                         value={formData.email}
                         onChange={handleChange}
                         required
-                        className="w-full px-6 py-4 bg-gray-50 border-none rounded-xl focus:ring-2 focus:ring-accent-500 transition-all outline-none"
+                        className="w-full px-5 sm:px-6 py-3.5 sm:py-4 bg-gray-50 border-none rounded-xl focus:ring-2 focus:ring-accent-500 transition-all outline-none"
                         placeholder={t('contact.form.emailPlaceholder')}
                       />
                     </div>
@@ -193,7 +193,7 @@ const Contact = () => {
                         name="subject"
                         value={formData.subject}
                         onChange={handleChange}
-                        className="w-full px-6 py-4 bg-gray-50 border-none rounded-xl focus:ring-2 focus:ring-accent-500 transition-all outline-none appearance-none"
+                        className="w-full px-5 sm:px-6 py-3.5 sm:py-4 bg-gray-50 border-none rounded-xl focus:ring-2 focus:ring-accent-500 transition-all outline-none appearance-none"
                       >
                         <option value="consultation">{t('contact.form.subjects.consultation')}</option>
                         <option value="orthodontie">{t('contact.form.subjects.orthodontics')}</option>
@@ -212,7 +212,7 @@ const Contact = () => {
                       value={formData.message}
                       onChange={handleChange}
                       rows="4"
-                      className="w-full px-6 py-4 bg-gray-50 border-none rounded-xl focus:ring-2 focus:ring-accent-500 transition-all outline-none resize-none"
+                      className="w-full px-5 sm:px-6 py-3.5 sm:py-4 bg-gray-50 border-none rounded-xl focus:ring-2 focus:ring-accent-500 transition-all outline-none resize-none"
                       placeholder={t('contact.form.messagePlaceholder')}
                     ></textarea>
                   </div>
@@ -243,9 +243,9 @@ const Contact = () => {
       </section>
 
       {/* Map Section */}
-      <section className="py-20 bg-gray-50">
+      <section className="py-14 sm:py-20 bg-gray-50">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="bg-white p-4 rounded-[3rem] shadow-xl overflow-hidden h-[400px] relative z-0">
+          <div className="bg-white p-3 sm:p-4 rounded-[2.2rem] sm:rounded-[3rem] shadow-xl overflow-hidden h-[320px] sm:h-[400px] relative z-0">
             <MapContainer center={position} zoom={15} scrollWheelZoom={false} className="w-full h-full rounded-[2.5rem] z-0">
               <TileLayer
                 attribution='&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'

@@ -81,7 +81,7 @@ const Home = () => {
   return (
     <div className="font-sans text-gray-800 overflow-x-hidden">
       {/* Moving Banner */}
-      <section className="relative h-[72vh] min-h-[520px] max-h-[850px] overflow-hidden bg-gray-900">
+      <section className="relative h-[66vh] min-h-[420px] sm:h-[72vh] sm:min-h-[520px] max-h-[850px] overflow-hidden bg-gray-900">
         <AnimatePresence mode="wait">
           <motion.img
             key={currentSlide}
@@ -91,7 +91,7 @@ const Home = () => {
             initial={{ opacity: 0, scale: 1.08 }}
             animate={{ opacity: 1, scale: 1 }}
             exit={{ opacity: 0, scale: 1.02 }}
-            transition={{ duration: 0.8 }}
+            transition={{ duration: 0.55 }}
           />
         </AnimatePresence>
 
@@ -100,17 +100,17 @@ const Home = () => {
         <div className="relative container mx-auto px-4 sm:px-6 lg:px-8 h-full flex flex-col justify-end pb-10 sm:pb-14">
           <div className="max-w-3xl text-white">
             <h1
-              className="text-2xl sm:text-3xl lg:text-5xl font-light leading-[1.1] mb-6"
+              className="text-xl sm:text-3xl lg:text-5xl font-light leading-[1.1] mb-4 sm:mb-6"
               dangerouslySetInnerHTML={{ __html: activeSlide.title }}
             />
-            <p className="text-base sm:text-lg text-white/90 leading-relaxed max-w-2xl mb-8">
+            <p className="text-sm sm:text-lg text-white/90 leading-relaxed max-w-2xl mb-6 sm:mb-8">
               {activeSlide.subtitle}
             </p>
             <div className="flex flex-wrap gap-4">
-              <Link to="/contact" className="bg-white text-gray-900 px-7 py-3 rounded-full font-semibold hover:bg-primary-100 transition-colors">
+              <Link to="/contact" className="bg-white text-gray-900 px-5 py-2.5 sm:px-7 sm:py-3 rounded-full text-sm sm:text-base font-semibold hover:bg-primary-100 transition-colors">
                 {t('home.hero.bookAppointment')}
               </Link>
-              <Link to="/services" className="border border-white/50 text-white px-7 py-3 rounded-full font-semibold hover:bg-white hover:text-gray-900 transition-colors">
+              <Link to="/services" className="border border-white/50 text-white px-5 py-2.5 sm:px-7 sm:py-3 rounded-full text-sm sm:text-base font-semibold hover:bg-white hover:text-gray-900 transition-colors">
                 {t('home.services.allServices')}
               </Link>
             </div>
@@ -120,14 +120,14 @@ const Home = () => {
             <div className="flex gap-3">
               <button
                 onClick={prevSlide}
-                className="w-11 h-11 rounded-full bg-white/20 hover:bg-white/35 text-white flex items-center justify-center backdrop-blur-sm transition-colors"
+                className="w-10 h-10 sm:w-11 sm:h-11 rounded-full bg-white/20 hover:bg-white/35 text-white flex items-center justify-center backdrop-blur-sm transition-colors"
                 aria-label={t('gallery.navigation.previous')}
               >
                 <FaChevronLeft />
               </button>
               <button
                 onClick={nextSlide}
-                className="w-11 h-11 rounded-full bg-white/20 hover:bg-white/35 text-white flex items-center justify-center backdrop-blur-sm transition-colors"
+                className="w-10 h-10 sm:w-11 sm:h-11 rounded-full bg-white/20 hover:bg-white/35 text-white flex items-center justify-center backdrop-blur-sm transition-colors"
                 aria-label={t('gallery.navigation.next')}
               >
                 <FaChevronRight />
@@ -148,99 +148,12 @@ const Home = () => {
         </div>
       </section>
 
-      {/* Testimonials */}
-      <section className="py-16 lg:py-20 bg-gray-50 overflow-hidden">
-        <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-12">
-            <h2 className="text-2xl lg:text-4xl font-light text-gray-900 mb-4">
-              {t('home.testimonials.text')}
-            </h2>
-          </div>
-
-          <div className="flex flex-col lg:flex-row items-center justify-center gap-8 lg:gap-12 max-w-6xl mx-auto">
-            {/* Left: Rating Card */}
-            <div className="bg-white p-10 rounded-[2.5rem] shadow-xl w-full lg:w-1/3 flex flex-col items-center text-center relative z-10">
-              <div className="w-20 h-20 bg-gray-50 rounded-full flex items-center justify-center mb-6">
-                <img src={GoogleLogo} alt={t('home.testimonials.googleAlt')} className="w-10 h-10 object-contain" />
-              </div>
-              <h3 className="text-2xl font-bold text-gray-900 mb-2">{t('header.brandName')}</h3>
-              <div className="flex items-center gap-2 mb-2">
-                <span className="text-4xl font-bold text-gray-900">4.9</span>
-                <div className="flex text-yellow-400 text-xl">
-                  {[1, 2, 3, 4, 5].map(i => <FaStar key={i} />)}
-                </div>
-              </div>
-              <p className="text-gray-500 text-sm mb-8">{t('home.testimonials.note')}</p>
-
-              <a href="https://g.page/r/..." target="_blank" rel="noopener noreferrer" className="bg-blue-600 text-white px-8 py-3 rounded-full font-medium hover:bg-blue-700 transition-colors shadow-lg shadow-blue-200 flex items-center gap-2">
-                <span className="text-sm">{t('home.testimonials.rateUs')}</span>
-                <img src="https://www.gstatic.com/images/branding/googlelogo/svg/googlelogo_light_clr_74x24px.svg" alt={t('home.testimonials.googleAlt')} className="h-5 opacity-90" />
-              </a>
-            </div>
-
-            {/* Right: Carousel */}
-            <div className="w-full lg:w-2/3 relative min-h-[360px] lg:h-[320px] flex flex-col">
-              <AnimatePresence mode="wait">
-                <motion.div
-                  key={currentReviewIndex}
-                  initial={{ opacity: 0, x: 50 }}
-                  animate={{ opacity: 1, x: 0 }}
-                  exit={{ opacity: 0, x: -50 }}
-                  transition={{ duration: 0.5 }}
-                  className="absolute inset-0"
-                >
-                  <div className="bg-white p-10 rounded-[2.5rem] shadow-lg h-full flex flex-col justify-center relative">
-                    <div className="absolute top-8 right-8">
-                      <img src={GoogleLogo} alt={t('home.testimonials.googleAlt')} className="w-8 h-8 opacity-50" />
-                    </div>
-
-                    <div className="flex items-center gap-6 mb-8">
-                      <div className="w-20 h-20 rounded-full overflow-hidden border-4 border-gray-50 shadow-sm flex-shrink-0">
-                        {reviewImages[currentReviewIndex] ? (
-                          <img src={reviewImages[currentReviewIndex]} alt={activeReview.name} className="w-full h-full object-cover" />
-                        ) : (
-                          <div className="w-full h-full bg-primary-50 flex items-center justify-center text-primary-300 font-bold text-2xl">
-                            {activeReview.name?.charAt(0)}
-                          </div>
-                        )}
-                      </div>
-                      <div>
-                        <h4 className="text-xl font-bold text-gray-900 mb-1">{activeReview.name}</h4>
-                        <div className="flex text-yellow-400 text-sm mb-1">
-                          {[...Array(activeReview.rating || 5)].map((_, i) => <FaStar key={i} />)}
-                        </div>
-                        <p className="text-gray-400 text-xs">{t('home.testimonials.recent')}</p>
-                      </div>
-                    </div>
-
-                    <p className="text-gray-600 text-lg leading-relaxed italic">
-                      "{activeReview.text}"
-                    </p>
-                  </div>
-                </motion.div>
-              </AnimatePresence>
-
-              <div className="absolute -bottom-12 left-0 right-0 flex justify-center gap-3">
-                {reviews.map((_, index) => (
-                  <button
-                    key={index}
-                    onClick={() => setCurrentReviewIndex(index)}
-                    className={`w-3 h-3 rounded-full transition-all duration-300 ${index === currentReviewIndex ? 'bg-primary-600 w-8' : 'bg-gray-300 hover:bg-primary-300'}`}
-                    aria-label={t('home.testimonials.goToReview', { number: index + 1 })}
-                  />
-                ))}
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-
       {/* Alternating Team Section */}
-      <section className="py-20 lg:py-28 bg-white">
+      <section className="py-14 sm:py-20 lg:py-28 bg-white">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center max-w-3xl mx-auto mb-14">
+          <div className="text-center max-w-3xl mx-auto mb-10 sm:mb-14">
             <span className="uppercase tracking-[0.2em] text-xs font-semibold text-gray-400">{t('home.team.subtitle')}</span>
-            <h2 className="text-3xl lg:text-4xl font-light text-gray-900 mt-4 leading-tight">{t('home.team.title')}</h2>
+            <h2 className="text-2xl sm:text-3xl lg:text-4xl font-light text-gray-900 mt-4 leading-tight">{t('home.team.title')}</h2>
           </div>
 
           <div className="space-y-12 lg:space-y-16">
@@ -250,14 +163,14 @@ const Home = () => {
                 <article key={index} className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-12 items-center">
                   <div className={reversed ? 'lg:order-2' : ''}>
                     <div className="rounded-[2rem] overflow-hidden shadow-xl h-[250px] sm:h-[300px] lg:h-[360px] bg-gray-100">
-                      <img src={mainDoctorImages[index % mainDoctorImages.length]} alt={member.name} className="w-full h-full object-cover" />
+                      <img src={mainDoctorImages[index % mainDoctorImages.length]} alt={member.name} className="w-full h-full object-cover" loading="lazy" decoding="async" />
                     </div>
                   </div>
 
                   <div className={reversed ? 'lg:order-1' : ''}>
-                    <div className="bg-gray-50 rounded-[2rem] p-8 lg:p-10 border border-gray-100">
+                    <div className="bg-gray-50 rounded-[2rem] p-6 sm:p-8 lg:p-10 border border-gray-100">
                       <p className="text-primary-600 text-sm sm:text-base font-semibold uppercase tracking-wider mb-3">{member.role}</p>
-                      <h3 className="text-3xl sm:text-4xl font-light text-gray-900 mb-4 leading-tight">{member.name}</h3>
+                      <h3 className="text-2xl sm:text-4xl font-light text-gray-900 mb-4 leading-tight">{member.name}</h3>
                       <p className="text-gray-600 leading-relaxed text-base sm:text-lg">{member.description}</p>
                     </div>
                   </div>
@@ -272,6 +185,8 @@ const Home = () => {
                 src="https://images.unsplash.com/photo-1556761175-5973dc0f32e7?auto=format&fit=crop&w=1600&q=80"
                 alt={t('home.media.teamGroup')}
                 className="w-full h-full object-cover"
+                loading="lazy"
+                decoding="async"
               />
             </div>
 
@@ -290,9 +205,96 @@ const Home = () => {
           </div>
 
           <div className="text-center mt-14">
-            <Link to="/equipe" className="bg-primary-100 text-primary-700 px-8 py-4 rounded-lg font-medium hover:bg-primary-200 transition-colors">
+            <Link to="/equipe" className="bg-primary-100 text-primary-700 px-6 sm:px-8 py-3 sm:py-4 rounded-lg font-medium hover:bg-primary-200 transition-colors">
               {t('home.team.viewAll')}
             </Link>
+          </div>
+        </div>
+      </section>
+
+      {/* Testimonials */}
+      <section className="py-12 sm:py-16 lg:py-20 bg-gray-50 overflow-hidden">
+        <div className="container mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center mb-10 sm:mb-12">
+            <h2 className="text-xl sm:text-2xl lg:text-4xl font-light text-gray-900 mb-4">
+              {t('home.testimonials.text')}
+            </h2>
+          </div>
+
+          <div className="flex flex-col lg:flex-row items-center justify-center gap-8 lg:gap-12 max-w-6xl mx-auto">
+            {/* Left: Rating Card */}
+            <div className="bg-white p-6 sm:p-10 rounded-[2.5rem] shadow-xl w-full lg:w-1/3 flex flex-col items-center text-center relative z-10">
+              <div className="w-16 h-16 sm:w-20 sm:h-20 bg-gray-50 rounded-full flex items-center justify-center mb-5 sm:mb-6">
+                <img src={GoogleLogo} alt={t('home.testimonials.googleAlt')} className="w-8 h-8 sm:w-10 sm:h-10 object-contain" loading="lazy" decoding="async" />
+              </div>
+              <h3 className="text-xl sm:text-2xl font-bold text-gray-900 mb-2">{t('header.brandName')}</h3>
+              <div className="flex items-center gap-2 mb-2">
+                <span className="text-3xl sm:text-4xl font-bold text-gray-900">4.9</span>
+                <div className="flex text-yellow-400 text-lg sm:text-xl">
+                  {[1, 2, 3, 4, 5].map(i => <FaStar key={i} />)}
+                </div>
+              </div>
+              <p className="text-gray-500 text-sm mb-8">{t('home.testimonials.note')}</p>
+
+              <a href="https://g.page/r/..." target="_blank" rel="noopener noreferrer" className="bg-blue-600 text-white px-6 sm:px-8 py-2.5 sm:py-3 rounded-full font-medium hover:bg-blue-700 transition-colors shadow-lg shadow-blue-200 flex items-center gap-2">
+                <span className="text-sm">{t('home.testimonials.rateUs')}</span>
+                <img src="https://www.gstatic.com/images/branding/googlelogo/svg/googlelogo_light_clr_74x24px.svg" alt={t('home.testimonials.googleAlt')} className="h-5 opacity-90" loading="lazy" decoding="async" />
+              </a>
+            </div>
+
+            {/* Right: Carousel */}
+            <div className="w-full lg:w-2/3 relative min-h-[320px] sm:min-h-[360px] lg:h-[320px] flex flex-col">
+              <AnimatePresence mode="wait">
+                <motion.div
+                  key={currentReviewIndex}
+                  initial={{ opacity: 0, x: 50 }}
+                  animate={{ opacity: 1, x: 0 }}
+                  exit={{ opacity: 0, x: -50 }}
+                  transition={{ duration: 0.35 }}
+                  className="absolute inset-0"
+                >
+                  <div className="bg-white p-6 sm:p-10 rounded-[2.5rem] shadow-lg h-full flex flex-col justify-center relative">
+                    <div className="absolute top-6 sm:top-8 right-6 sm:right-8">
+                      <img src={GoogleLogo} alt={t('home.testimonials.googleAlt')} className="w-7 h-7 sm:w-8 sm:h-8 opacity-50" loading="lazy" decoding="async" />
+                    </div>
+
+                    <div className="flex items-center gap-4 sm:gap-6 mb-6 sm:mb-8">
+                      <div className="w-16 h-16 sm:w-20 sm:h-20 rounded-full overflow-hidden border-4 border-gray-50 shadow-sm flex-shrink-0">
+                        {reviewImages[currentReviewIndex] ? (
+                          <img src={reviewImages[currentReviewIndex]} alt={activeReview.name} className="w-full h-full object-cover" loading="lazy" decoding="async" />
+                        ) : (
+                          <div className="w-full h-full bg-primary-50 flex items-center justify-center text-primary-300 font-bold text-2xl">
+                            {activeReview.name?.charAt(0)}
+                          </div>
+                        )}
+                      </div>
+                      <div>
+                        <h4 className="text-lg sm:text-xl font-bold text-gray-900 mb-1">{activeReview.name}</h4>
+                        <div className="flex text-yellow-400 text-sm mb-1">
+                          {[...Array(activeReview.rating || 5)].map((_, i) => <FaStar key={i} />)}
+                        </div>
+                        <p className="text-gray-400 text-xs">{t('home.testimonials.recent')}</p>
+                      </div>
+                    </div>
+
+                    <p className="text-gray-600 text-base sm:text-lg leading-relaxed italic">
+                      "{activeReview.text}"
+                    </p>
+                  </div>
+                </motion.div>
+              </AnimatePresence>
+
+              <div className="absolute -bottom-12 left-0 right-0 flex justify-center gap-3">
+                {reviews.map((_, index) => (
+                  <button
+                    key={index}
+                    onClick={() => setCurrentReviewIndex(index)}
+                    className={`w-3 h-3 rounded-full transition-all duration-300 ${index === currentReviewIndex ? 'bg-primary-600 w-8' : 'bg-gray-300 hover:bg-primary-300'}`}
+                    aria-label={t('home.testimonials.goToReview', { number: index + 1 })}
+                  />
+                ))}
+              </div>
+            </div>
           </div>
         </div>
       </section>
@@ -355,8 +357,8 @@ const Home = () => {
 
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-20 items-center">
             <div className="flex gap-6">
-              <img src="https://images.unsplash.com/photo-1629909613654-28e377c37b09?auto=format&fit=crop&w=500&q=80" alt={t('home.media.introOne')} className="rounded-[2rem] w-1/2 h-80 object-cover shadow-lg" />
-              <img src="https://images.unsplash.com/photo-1579684385127-1ef15d508118?auto=format&fit=crop&w=500&q=80" alt={t('home.media.introTwo')} className="rounded-[2rem] w-1/2 h-80 object-cover mt-16 shadow-lg" />
+              <img src="https://images.unsplash.com/photo-1629909613654-28e377c37b09?auto=format&fit=crop&w=500&q=80" alt={t('home.media.introOne')} className="rounded-[2rem] w-1/2 h-80 object-cover shadow-lg" loading="lazy" decoding="async" />
+              <img src="https://images.unsplash.com/photo-1579684385127-1ef15d508118?auto=format&fit=crop&w=500&q=80" alt={t('home.media.introTwo')} className="rounded-[2rem] w-1/2 h-80 object-cover mt-16 shadow-lg" loading="lazy" decoding="async" />
             </div>
 
             <div className="lg:pl-8">
@@ -406,7 +408,7 @@ const Home = () => {
                 <h3 className="text-2xl font-light text-gray-900 mb-6">{item.title}</h3>
                 <p className="text-gray-500 leading-relaxed mb-8 flex-grow text-sm sm:text-base">{item.desc}</p>
                 <div className="mt-auto">
-                  <img src={item.icon} alt={item.title} className="w-12 h-12 opacity-20 grayscale" />
+                  <img src={item.icon} alt={item.title} className="w-12 h-12 opacity-20 grayscale" loading="lazy" decoding="async" />
                 </div>
               </div>
             ))}
@@ -420,7 +422,7 @@ const Home = () => {
           <div className="flex flex-col lg:flex-row items-center gap-16">
             <div className="lg:w-1/2">
               <div className="rounded-[3rem] overflow-hidden shadow-2xl">
-                <img src="https://images.unsplash.com/photo-1609840114035-3c981b782dfe?auto=format&fit=crop&w=800&q=80" alt={t('home.media.child')} className="w-full h-auto" />
+                <img src="https://images.unsplash.com/photo-1609840114035-3c981b782dfe?auto=format&fit=crop&w=800&q=80" alt={t('home.media.child')} className="w-full h-auto" loading="lazy" decoding="async" />
               </div>
             </div>
             <div className="lg:w-1/2 lg:pl-10">
@@ -447,7 +449,7 @@ const Home = () => {
       <section className="relative">
         <div className="relative min-h-[500px] lg:h-[700px]">
           <div className="absolute inset-0">
-            <img src="https://images.unsplash.com/photo-1600170311833-c2cf5280ce49?auto=format&fit=crop&w=1920&q=80" alt={t('home.media.doctor')} className="w-full h-full object-cover" />
+            <img src="https://images.unsplash.com/photo-1600170311833-c2cf5280ce49?auto=format&fit=crop&w=1920&q=80" alt={t('home.media.doctor')} className="w-full h-full object-cover" loading="lazy" decoding="async" />
             <div className="absolute inset-0 bg-gradient-to-r from-black/60 to-transparent"></div>
           </div>
           <div className="relative container mx-auto px-4 sm:px-6 lg:px-8 h-full flex items-center">

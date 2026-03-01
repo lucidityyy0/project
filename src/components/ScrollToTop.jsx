@@ -12,10 +12,21 @@ const ScrollToTop = () => {
         const targets = Array.from(document.querySelectorAll('main section, footer'));
         if (!targets.length) return undefined;
 
+        const disableReveal =
+            window.matchMedia('(max-width: 767px)').matches ||
+            window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+
         targets.forEach((element) => {
             element.classList.add('scroll-fade-target');
             element.classList.remove('is-visible');
         });
+
+        if (disableReveal) {
+            targets.forEach((element) => {
+                element.classList.add('is-visible');
+            });
+            return undefined;
+        }
 
         const observer = new IntersectionObserver(
             (entries) => {
@@ -27,8 +38,8 @@ const ScrollToTop = () => {
                 });
             },
             {
-                threshold: 0.14,
-                rootMargin: '0px 0px -8% 0px'
+                threshold: 0.1,
+                rootMargin: '0px 0px -6% 0px'
             }
         );
 

@@ -1,7 +1,7 @@
 import { useState, useEffect } from 'react';
 import { Link, useLocation } from 'react-router-dom';
 import { motion, AnimatePresence } from 'framer-motion';
-import { FaBars, FaTimes, FaWhatsapp } from 'react-icons/fa';
+import { FaBars, FaTimes, FaMoon, FaSun } from 'react-icons/fa';
 import { useTranslation } from 'react-i18next';
 import LogoIcon from '../assets/icon.png';
 
@@ -9,15 +9,35 @@ const Header = () => {
   const { t, i18n } = useTranslation();
   const [isScrolled, setIsScrolled] = useState(false);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
+  const [isDarkMode, setIsDarkMode] = useState(false);
   const location = useLocation();
 
   useEffect(() => {
+    let ticking = false;
+
     const handleScroll = () => {
-      setIsScrolled(window.scrollY > 20);
+      if (ticking) return;
+
+      ticking = true;
+      window.requestAnimationFrame(() => {
+        const nextValue = window.scrollY > 20;
+        setIsScrolled((prev) => (prev === nextValue ? prev : nextValue));
+        ticking = false;
+      });
     };
 
-    window.addEventListener('scroll', handleScroll);
+    window.addEventListener('scroll', handleScroll, { passive: true });
+    handleScroll();
+
     return () => window.removeEventListener('scroll', handleScroll);
+  }, []);
+
+  useEffect(() => {
+    const savedTheme = localStorage.getItem('theme');
+    const shouldUseDark = savedTheme === 'dark';
+
+    setIsDarkMode(shouldUseDark);
+    document.documentElement.classList.toggle('dark', shouldUseDark);
   }, []);
 
   useEffect(() => {
@@ -25,17 +45,31 @@ const Header = () => {
     document.body.style.overflow = 'unset';
   }, [location]);
 
-  const toggleMobileMenu = () => {
-    setIsMobileMenuOpen(!isMobileMenuOpen);
-    if (!isMobileMenuOpen) {
-      document.body.style.overflow = 'hidden';
-    } else {
+  useEffect(() => {
+    return () => {
       document.body.style.overflow = 'unset';
-    }
+    };
+  }, []);
+
+  const toggleMobileMenu = () => {
+    setIsMobileMenuOpen((prev) => {
+      const next = !prev;
+      document.body.style.overflow = next ? 'hidden' : 'unset';
+      return next;
+    });
   };
 
   const changeLanguage = (lng) => {
     i18n.changeLanguage(lng);
+  };
+
+  const toggleTheme = () => {
+    setIsDarkMode((prev) => {
+      const next = !prev;
+      document.documentElement.classList.toggle('dark', next);
+      localStorage.setItem('theme', next ? 'dark' : 'light');
+      return next;
+    });
   };
 
   const navLinks = [
@@ -52,22 +86,22 @@ const Header = () => {
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between">
           {/* Logo */}
-          <Link to="/" className="flex items-center gap-3 group">
+          <Link to="/" className="flex items-center gap-2 sm:gap-3 group min-w-0">
             <img src={LogoIcon} alt={t('header.brandName')} className="w-10 h-10 sm:w-12 sm:h-12" />
-            <div className="flex flex-col items-center">
-              <span className="text-lg sm:text-2xl font-bold text-gray-900 tracking-tight leading-none">{t('header.brandName')}</span>
-              <span className="text-xs sm:text-sm text-gray-500 font-medium tracking-wide">{t('header.dentalCenter')}</span>
+            <div className="flex flex-col items-start sm:items-center min-w-0">
+              <span className="text-base sm:text-2xl font-bold text-gray-900 tracking-tight leading-none whitespace-nowrap">{t('header.brandName')}</span>
+              <span className="hidden sm:block text-xs sm:text-sm text-gray-500 font-medium tracking-wide whitespace-nowrap">{t('header.dentalCenter')}</span>
 
             </div>
           </Link>
 
           {/* Desktop Navigation */}
-          <nav className="hidden xl:flex items-center gap-8">
+          <nav className="hidden xl:flex items-center gap-4 2xl:gap-7">
             {navLinks.map((link, index) => (
               <Link
                 key={index}
                 to={link.path}
-                className="flex items-center gap-1 text-gray-600 hover:text-primary-600 font-medium text-base transition-colors relative group"
+                className="flex items-center gap-1 text-gray-600 hover:text-primary-600 font-medium text-base 2xl:text-lg transition-colors relative group whitespace-nowrap"
               >
                 {link.label}
                 <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-primary-600 transition-all duration-300 group-hover:w-full"></span>
@@ -76,7 +110,7 @@ const Header = () => {
           </nav>
 
           {/* Right Side */}
-          <div className="hidden lg:flex items-center gap-6">
+          <div className="hidden xl:flex items-center gap-3 2xl:gap-5">
             <div className="flex items-center gap-2">
               <button
                 onClick={() => changeLanguage('fr')}
@@ -91,19 +125,24 @@ const Header = () => {
               >
                 EN
               </button>
+              <button
+                onClick={toggleTheme}
+                className="theme-toggle ml-1 inline-flex items-center justify-center w-8 h-8 rounded-full text-gray-600 hover:text-primary-600 hover:bg-gray-100 transition-colors"
+                aria-label={isDarkMode ? 'Switch to light mode' : 'Switch to dark mode'}
+                title={isDarkMode ? 'Light mode' : 'Dark mode'}
+              >
+                {isDarkMode ? <FaSun className="text-sm" /> : <FaMoon className="text-sm" />}
+              </button>
             </div>
-            <a href="https://wa.me/212522213566" target="_blank" rel="noopener noreferrer" className="flex items-center gap-2 text-gray-600 hover:text-primary-600 font-medium transition-colors">
-              <FaWhatsapp className="text-xl" />
-            </a>
 
-            <Link to="/contact" className="bg-primary-light-pink text-gray-900 px-6 py-3 rounded-full font-bold hover:bg-primary-200 transition-all shadow-lg hover:shadow-primary-200 transform hover:-translate-y-0.5">
+            <Link to="/contact" className="bg-primary-light-pink text-gray-900 px-4 2xl:px-6 py-2.5 2xl:py-3 rounded-full text-base font-bold hover:bg-primary-200 transition-all shadow-lg hover:shadow-primary-200 transform hover:-translate-y-0.5 whitespace-nowrap">
               {t('header.bookAppointment')}
             </Link>
           </div>
 
           {/* Mobile Menu Toggle */}
           <button
-            className="lg:hidden text-gray-900 text-2xl p-2 hover:bg-gray-50 rounded-lg transition-colors"
+            className="xl:hidden text-gray-900 text-2xl p-2 hover:bg-gray-50 rounded-lg transition-colors"
             onClick={toggleMobileMenu}
             aria-label={t('header.toggleMenu')}
           >
@@ -126,7 +165,7 @@ const Header = () => {
             animate={{ opacity: 1, height: 'auto' }}
             exit={{ opacity: 0, height: 0 }}
             transition={{ duration: 0.3 }}
-            className="lg:hidden bg-white border-t border-gray-100 shadow-xl overflow-hidden"
+            className="xl:hidden bg-white border-t border-gray-100 shadow-xl overflow-hidden max-h-[calc(100vh-72px)] overflow-y-auto"
           >
             <nav className="container mx-auto px-4 py-6 space-y-2">
               {navLinks.map((link, index) => (
@@ -152,6 +191,29 @@ const Header = () => {
                 animate={{ opacity: 1 }}
                 transition={{ delay: 0.3 }}
               >
+                <div className="flex items-center justify-center gap-4 pb-2">
+                  <button
+                    onClick={() => changeLanguage('fr')}
+                    className={`font-medium transition-colors ${i18n.language === 'fr' ? 'text-primary-600' : 'text-gray-500 hover:text-primary-600'}`}
+                  >
+                    FR
+                  </button>
+                  <span className="text-gray-300">|</span>
+                  <button
+                    onClick={() => changeLanguage('en')}
+                    className={`font-medium transition-colors ${i18n.language === 'en' ? 'text-primary-600' : 'text-gray-500 hover:text-primary-600'}`}
+                  >
+                    EN
+                  </button>
+                  <button
+                    onClick={toggleTheme}
+                    className="theme-toggle inline-flex items-center justify-center w-8 h-8 rounded-full text-gray-600 hover:text-primary-600 hover:bg-gray-100 transition-colors"
+                    aria-label={isDarkMode ? 'Switch to light mode' : 'Switch to dark mode'}
+                    title={isDarkMode ? 'Light mode' : 'Dark mode'}
+                  >
+                    {isDarkMode ? <FaSun className="text-sm" /> : <FaMoon className="text-sm" />}
+                  </button>
+                </div>
                 <Link to="/contact" className="btn bg-primary-light-pink text-gray-900 w-full justify-center rounded-xl font-bold hover:bg-primary-200 py-4 shadow-lg" onClick={() => setIsMobileMenuOpen(false)}>
                   {t('header.bookAppointment')}
                 </Link>

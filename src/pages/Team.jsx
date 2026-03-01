@@ -18,14 +18,14 @@ const Team = () => {
     return (
         <div className="font-sans text-gray-800">
             {/* Hero Section */}
-            <section className="relative bg-gray-50 min-h-[600px] flex items-center">
+            <section className="relative bg-gray-50 min-h-[460px] sm:min-h-[560px] lg:min-h-[600px] flex items-center">
                 <div className="container mx-auto px-4 relative z-10">
                     <div className="flex flex-col lg:flex-row items-center">
                         {/* Left Content */}
                         <div className="lg:w-1/2 py-12 lg:py-0">
-                            <div className="bg-white p-8 lg:p-14 rounded-[3rem] shadow-xl max-w-2xl relative z-20">
-                                <h1 className="text-4xl lg:text-6xl font-light text-gray-900 mb-8 leading-tight">{t('teamPage.hero.title')}</h1>
-                                <p className="text-gray-500 text-base lg:text-lg leading-relaxed">
+                            <div className="bg-white p-6 sm:p-8 lg:p-14 rounded-[2rem] sm:rounded-[3rem] shadow-xl max-w-2xl relative z-20">
+                                <h1 className="text-3xl sm:text-4xl lg:text-6xl font-light text-gray-900 mb-6 sm:mb-8 leading-tight">{t('teamPage.hero.title')}</h1>
+                                <p className="text-gray-500 text-sm sm:text-base lg:text-lg leading-relaxed">
                                     {t('teamPage.hero.description')}
                                 </p>
                             </div>
@@ -38,25 +38,27 @@ const Team = () => {
                         src="https://images.unsplash.com/photo-1556761175-5973dc0f32e7?auto=format&fit=crop&w=1600&q=80"
                         alt={t('teamPage.hero.title')}
                         className="w-full h-full object-cover object-center lg:rounded-bl-[5rem]"
+                        loading="eager"
+                        decoding="async"
                     />
                     <div className="absolute inset-0 bg-gradient-to-r from-gray-50/80 via-transparent to-transparent lg:hidden"></div>
                 </div>
             </section>
 
             {/* Team Grid */}
-            <section className="py-20 lg:py-32 bg-gray-50">
+            <section className="py-14 sm:py-20 lg:py-32 bg-gray-50">
                 <div className="container mx-auto px-4">
                     <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-8">
                         {members.map((member, index) => (
-                            <div key={index} className="bg-white rounded-[2rem] p-8 shadow-sm hover:shadow-xl transition-all duration-300 group">
+                            <div key={index} className="bg-white rounded-[2rem] p-6 sm:p-8 shadow-sm hover:shadow-xl transition-all duration-300 group">
                                 <div className="mb-5">
-                                    <h3 className="text-2xl font-light text-gray-900 leading-snug">{member.name}</h3>
+                                    <h3 className="text-xl sm:text-2xl font-light text-gray-900 leading-snug">{member.name}</h3>
                                     <p className="text-primary-600 text-sm font-semibold uppercase tracking-wide mt-2">{member.role}</p>
                                 </div>
 
                                 <div className="flex justify-center my-6">
-                                    <div className="w-40 h-40 rounded-full overflow-hidden border-4 border-gray-50">
-                                        <img src={memberImages[index % memberImages.length]} alt={member.name} className="w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-500" />
+                                    <div className="w-32 h-32 sm:w-40 sm:h-40 rounded-full overflow-hidden border-4 border-gray-50">
+                                        <img src={memberImages[index % memberImages.length]} alt={member.name} className="w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-500" loading="lazy" decoding="async" />
                                     </div>
                                 </div>
 
@@ -74,27 +76,27 @@ const Team = () => {
             </section>
 
             {/* CTA */}
-            <section className="py-20 lg:py-32 bg-white">
+            <section className="py-14 sm:py-20 lg:py-32 bg-white">
                 <div className="container mx-auto px-4">
                     <div className="flex flex-col lg:flex-row gap-8">
                         {/* Left Collage */}
                         <div className="lg:w-1/2 grid grid-cols-2 gap-4">
                             <div className="col-span-2 h-64 rounded-[2rem] overflow-hidden">
-                                <img src="https://images.unsplash.com/photo-1588776814546-1ffcf47267a5?auto=format&fit=crop&w=800&q=80" className="w-full h-full object-cover" alt={t('teamPage.hero.title')} />
+                                <img src="https://images.unsplash.com/photo-1588776814546-1ffcf47267a5?auto=format&fit=crop&w=800&q=80" className="w-full h-full object-cover" alt={t('teamPage.hero.title')} loading="lazy" decoding="async" />
                             </div>
                             <div className="h-48 rounded-[2rem] overflow-hidden">
-                                <img src="https://images.unsplash.com/photo-1609840114035-3c981b782dfe?auto=format&fit=crop&w=800&q=80" className="w-full h-full object-cover" alt={t('teamPage.hero.title')} />
+                                <img src="https://images.unsplash.com/photo-1609840114035-3c981b782dfe?auto=format&fit=crop&w=800&q=80" className="w-full h-full object-cover" alt={t('teamPage.hero.title')} loading="lazy" decoding="async" />
                             </div>
                             <div className="h-48 rounded-[2rem] overflow-hidden">
-                                <img src="https://images.unsplash.com/photo-1579684385127-1ef15d508118?auto=format&fit=crop&w=800&q=80" className="w-full h-full object-cover" alt={t('teamPage.hero.title')} />
+                                <img src="https://images.unsplash.com/photo-1579684385127-1ef15d508118?auto=format&fit=crop&w=800&q=80" className="w-full h-full object-cover" alt={t('teamPage.hero.title')} loading="lazy" decoding="async" />
                             </div>
                         </div>
 
                         {/* Right Content */}
-                        <div className="lg:w-1/2 bg-primary-600 rounded-[3rem] p-12 lg:p-20 text-white flex flex-col justify-center relative overflow-hidden">
+                        <div className="lg:w-1/2 bg-primary-600 rounded-[3rem] p-8 sm:p-12 lg:p-20 text-white flex flex-col justify-center relative overflow-hidden">
                             <div className="relative z-10">
-                                <h2 className="text-3xl lg:text-5xl font-light mb-8 leading-tight" dangerouslySetInnerHTML={{ __html: t('teamPage.cta.title') }} />
-                                <p className="text-primary-100/90 text-base lg:text-lg leading-relaxed max-w-xl">
+                                <h2 className="text-2xl sm:text-3xl lg:text-5xl font-light mb-6 sm:mb-8 leading-tight" dangerouslySetInnerHTML={{ __html: t('teamPage.cta.title') }} />
+                                <p className="text-primary-100/90 text-sm sm:text-base lg:text-lg leading-relaxed max-w-xl">
                                     {t('teamPage.cta.description')}
                                 </p>
                             </div>

@@ -15,7 +15,7 @@ const About = () => {
   return (
     <div className="font-sans text-primary-600">
       {/* Hero Section */}
-      <section className="relative pt-32 pb-20 lg:pt-48 lg:pb-32 overflow-hidden">
+      <section className="relative pt-24 sm:pt-32 pb-14 sm:pb-20 lg:pt-48 lg:pb-32 overflow-hidden">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-20 items-center">
             <motion.div
@@ -26,8 +26,8 @@ const About = () => {
               <span className="uppercase tracking-widest text-sm font-semibold mb-4 block text-accent-500">
                 {t('about.hero.subtitle')}
               </span>
-              <h1 className="text-3xl md:text-5xl font-light mb-6 leading-tight" dangerouslySetInnerHTML={{ __html: t('about.hero.title') }} />
-              <p className="text-base lg:text-lg text-gray-600 mb-8 leading-relaxed">
+              <h1 className="text-2xl sm:text-3xl md:text-5xl font-light mb-6 leading-tight" dangerouslySetInnerHTML={{ __html: t('about.hero.title') }} />
+              <p className="text-sm sm:text-base lg:text-lg text-gray-600 mb-8 leading-relaxed">
                 {t('about.hero.description')}
               </p>
               <div className="flex flex-wrap gap-4">
@@ -59,6 +59,8 @@ const About = () => {
                   src="https://images.unsplash.com/photo-1629909613654-28e377c37b09?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
                   alt={t('about.media.heroImage')}
                   className="w-full h-full object-cover"
+                  loading="eager"
+                  decoding="async"
                 />
               </div>
               {/* Decorative elements */}
@@ -70,17 +72,17 @@ const About = () => {
       </section>
 
       {/* Mission Section */}
-      <section className="py-20 bg-primary-600 text-white rounded-t-[3rem] relative overflow-hidden">
+      <section className="py-14 sm:py-20 bg-primary-600 text-white rounded-t-[3rem] relative overflow-hidden">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
           <div className="text-center max-w-3xl mx-auto mb-16">
             <motion.h2
-              className="text-3xl md:text-5xl font-light mb-6"
+              className="text-2xl sm:text-3xl md:text-5xl font-light mb-6"
               {...fadeInUp}
             >
               {t('about.mission.title')}
             </motion.h2>
             <motion.p
-              className="text-base lg:text-lg opacity-90 leading-relaxed"
+              className="text-sm sm:text-base lg:text-lg opacity-90 leading-relaxed"
               {...fadeInUp}
             >
               {t('about.mission.description')}
@@ -104,7 +106,7 @@ const About = () => {
                 <div className="w-16 h-16 bg-accent-100 text-primary-600 rounded-2xl flex items-center justify-center text-3xl mb-6">
                   <item.icon />
                 </div>
-                <h3 className="text-2xl font-bold mb-4">{item.title}</h3>
+                <h3 className="text-xl sm:text-2xl font-bold mb-4">{item.title}</h3>
                 <p className="opacity-80 leading-relaxed">
                   {item.desc}
                 </p>
@@ -115,7 +117,7 @@ const About = () => {
       </section>
 
       {/* Approach Section */}
-      <section className="py-20 lg:py-32">
+      <section className="py-14 sm:py-20 lg:py-32">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
             <motion.div
@@ -125,15 +127,17 @@ const About = () => {
               viewport={{ once: true }}
               transition={{ duration: 0.8 }}
             >
-              <div className="relative rounded-[3rem] overflow-hidden shadow-xl h-[600px]">
+              <div className="relative rounded-[3rem] overflow-hidden shadow-xl h-[420px] sm:h-[520px] xl:h-[600px]">
                 <img
                   src="https://images.unsplash.com/photo-1588776814546-1ffcf47267a5?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
                   alt={t('about.media.approachImage')}
                   className="w-full h-full object-cover"
+                  loading="lazy"
+                  decoding="async"
                 />
-                <div className="absolute inset-0 bg-gradient-to-t from-primary-600/80 to-transparent flex items-end p-10">
+                <div className="absolute inset-0 bg-gradient-to-t from-primary-600/80 to-transparent flex items-end p-6 sm:p-10">
                   <div className="text-white">
-                    <p className="text-2xl font-light italic">{t('about.approach.quote')}</p>
+                    <p className="text-lg sm:text-2xl font-light italic">{t('about.approach.quote')}</p>
                   </div>
                 </div>
               </div>
@@ -146,7 +150,7 @@ const About = () => {
               <span className="uppercase tracking-widest text-sm font-semibold mb-4 block text-accent-500">
                 {t('about.approach.subtitle')}
               </span>
-              <h2 className="text-3xl md:text-5xl font-light mb-8 text-primary-600" dangerouslySetInnerHTML={{ __html: t('about.approach.title') }} />
+              <h2 className="text-2xl sm:text-3xl md:text-5xl font-light mb-8 text-primary-600" dangerouslySetInnerHTML={{ __html: t('about.approach.title') }} />
 
               <div className="space-y-8">
                 {[
@@ -155,11 +159,11 @@ const About = () => {
                   { num: '03', title: t('about.approach.steps.3.title'), desc: t('about.approach.steps.3.desc') }
                 ].map((step, index) => (
                   <div key={index} className="flex gap-6 group">
-                    <div className="text-4xl font-bold text-accent-100 group-hover:text-accent-500 transition-colors duration-300">
+                    <div className="text-3xl sm:text-4xl font-bold text-accent-100 group-hover:text-accent-500 transition-colors duration-300">
                       {step.num}
                     </div>
                     <div>
-                      <h3 className="text-xl font-bold mb-2 text-primary-600">{step.title}</h3>
+                      <h3 className="text-lg sm:text-xl font-bold mb-2 text-primary-600">{step.title}</h3>
                       <p className="text-gray-600 leading-relaxed">{step.desc}</p>
                     </div>
                   </div>
