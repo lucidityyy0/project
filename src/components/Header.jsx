@@ -73,43 +73,49 @@ const Header = () => {
   };
 
   const navLinks = [
-    { path: '/', label: t('header.home') },
-    { path: '/equipe', label: t('header.team') },
-    { path: '/conseils', label: t('header.advice') },
-    { path: '/services', label: t('header.services') },
-    { path: '/avant-apres', label: t('header.beforeAfter') }
+    { hash: '#home', label: t('header.home') },
+    { hash: '#about', label: t('about.mission.title') },
+    { hash: '#services', label: t('header.services') },
+    { hash: '#team', label: t('header.team') },
+    { hash: '#advice', label: t('header.advice') },
+    { hash: '#contact', label: t('header.contact') }
   ];
 
+  const activeHash = location.hash || '#home';
+
   return (
-    <header className={`sticky top-0 left-0 right-0 z-50 bg-white transition-all duration-300 ${isScrolled ? 'shadow-md py-2' : 'py-4 sm:py-6'
-      }`}>
+    <header className={`sticky top-0 left-0 right-0 z-50 bg-white transition-all duration-300 ${isScrolled ? 'shadow-md py-2' : 'py-4 sm:py-6'}`}>
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between">
-          {/* Logo */}
           <Link to="/" className="flex items-center gap-2 sm:gap-3 group min-w-0">
             <img src={LogoIcon} alt={t('header.brandName')} className="w-10 h-10 sm:w-12 sm:h-12" />
             <div className="flex flex-col items-start sm:items-center min-w-0">
-              <span className="text-base sm:text-2xl font-bold text-gray-900 tracking-tight leading-none whitespace-nowrap">{t('header.brandName')}</span>
+              <span className="text-base sm:text-2xl font-bold text-gray-900 tracking-tight leading-none whitespace-nowrap">
+                {t('header.brandName')}
+              </span>
               <span className="hidden sm:block text-xs sm:text-sm text-gray-500 font-medium tracking-wide whitespace-nowrap">{t('header.dentalCenter')}</span>
-
             </div>
           </Link>
 
-          {/* Desktop Navigation */}
           <nav className="hidden xl:flex items-center gap-4 2xl:gap-7">
-            {navLinks.map((link, index) => (
+            {navLinks.map((link) => (
               <Link
-                key={index}
-                to={link.path}
-                className="flex items-center gap-1 text-gray-600 hover:text-primary-600 font-medium text-base 2xl:text-lg transition-colors relative group whitespace-nowrap"
+                key={link.hash}
+                to={`/${link.hash}`}
+                className={`flex items-center gap-1 font-medium text-base 2xl:text-lg transition-colors relative group whitespace-nowrap ${
+                  activeHash === link.hash ? 'text-primary-600' : 'text-gray-600 hover:text-primary-600'
+                }`}
               >
                 {link.label}
-                <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-primary-600 transition-all duration-300 group-hover:w-full"></span>
+                <span
+                  className={`absolute -bottom-1 left-0 h-0.5 bg-primary-600 transition-all duration-300 ${
+                    activeHash === link.hash ? 'w-full' : 'w-0 group-hover:w-full'
+                  }`}
+                ></span>
               </Link>
             ))}
           </nav>
 
-          {/* Right Side */}
           <div className="hidden xl:flex items-center gap-3 2xl:gap-5">
             <div className="flex items-center gap-2">
               <button
@@ -131,16 +137,18 @@ const Header = () => {
                 aria-label={isDarkMode ? 'Switch to light mode' : 'Switch to dark mode'}
                 title={isDarkMode ? 'Light mode' : 'Dark mode'}
               >
-                {isDarkMode ? <FaSun className="text-sm" /> : <FaMoon className="text-sm" />}
-              </button>
+                  {isDarkMode ? <FaSun className="text-sm" /> : <FaMoon className="text-sm" />}
+                </button>
             </div>
 
-            <Link to="/contact" className="bg-primary-light-pink text-gray-900 px-4 2xl:px-6 py-2.5 2xl:py-3 rounded-full text-base font-bold hover:bg-primary-200 transition-all shadow-lg hover:shadow-primary-200 transform hover:-translate-y-0.5 whitespace-nowrap">
+            <Link
+              to="/#contact"
+              className="bg-primary-light-pink text-gray-900 px-4 2xl:px-6 py-2.5 2xl:py-3 rounded-full text-base font-bold hover:bg-primary-200 transition-all shadow-lg hover:shadow-primary-200 transform hover:-translate-y-0.5 whitespace-nowrap"
+            >
               {t('header.bookAppointment')}
             </Link>
           </div>
 
-          {/* Mobile Menu Toggle */}
           <button
             className="xl:hidden text-gray-900 text-2xl p-2 hover:bg-gray-50 rounded-lg transition-colors"
             onClick={toggleMobileMenu}
@@ -157,7 +165,6 @@ const Header = () => {
         </div>
       </div>
 
-      {/* Mobile Menu */}
       <AnimatePresence>
         {isMobileMenuOpen && (
           <motion.div
@@ -170,14 +177,18 @@ const Header = () => {
             <nav className="container mx-auto px-4 py-6 space-y-2">
               {navLinks.map((link, index) => (
                 <motion.div
-                  key={index}
+                  key={link.hash}
                   initial={{ opacity: 0, x: -20 }}
                   animate={{ opacity: 1, x: 0 }}
                   transition={{ delay: index * 0.05 }}
                 >
                   <Link
-                    to={link.path}
-                    className="block px-4 py-3 rounded-xl font-medium text-gray-700 hover:bg-primary-50 hover:text-primary-600 flex justify-between items-center transition-colors"
+                    to={`/${link.hash}`}
+                    className={`block px-4 py-3 rounded-xl font-medium flex justify-between items-center transition-colors ${
+                      activeHash === link.hash
+                        ? 'bg-primary-50 text-primary-600'
+                        : 'text-gray-700 hover:bg-primary-50 hover:text-primary-600'
+                    }`}
                     onClick={() => setIsMobileMenuOpen(false)}
                   >
                     {link.label}
@@ -214,7 +225,11 @@ const Header = () => {
                     {isDarkMode ? <FaSun className="text-sm" /> : <FaMoon className="text-sm" />}
                   </button>
                 </div>
-                <Link to="/contact" className="btn bg-primary-light-pink text-gray-900 w-full justify-center rounded-xl font-bold hover:bg-primary-200 py-4 shadow-lg" onClick={() => setIsMobileMenuOpen(false)}>
+                <Link
+                  to="/#contact"
+                  className="btn bg-primary-light-pink text-gray-900 w-full justify-center rounded-xl font-bold hover:bg-primary-200 py-4 shadow-lg"
+                  onClick={() => setIsMobileMenuOpen(false)}
+                >
                   {t('header.bookAppointment')}
                 </Link>
               </motion.div>

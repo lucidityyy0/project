@@ -42,12 +42,12 @@ const Footer = () => {
           <div>
             <h3 className="text-lg font-bold mb-6 text-white">{t('footer.quickLinks')}</h3>
             <ul className="space-y-3">
-              <li><Link to="/" className="text-gray-400 hover:text-primary-400 transition-colors">{t('header.home')}</Link></li>
-              <li><Link to="/equipe" className="text-gray-400 hover:text-primary-400 transition-colors">{t('footer.ourTeam')}</Link></li>
-              <li><Link to="/services" className="text-gray-400 hover:text-primary-400 transition-colors">{t('footer.ourServices')}</Link></li>
-              <li><Link to="/avant-apres" className="text-gray-400 hover:text-primary-400 transition-colors">{t('footer.gallery')}</Link></li>
-              <li><Link to="/conseils" className="text-gray-400 hover:text-primary-400 transition-colors">{t('header.advice')}</Link></li>
-              <li><Link to="/contact" className="text-gray-400 hover:text-primary-400 transition-colors">{t('header.contact')}</Link></li>
+              <li><Link to="/#home" className="text-gray-400 hover:text-primary-400 transition-colors">{t('header.home')}</Link></li>
+              <li><Link to="/#about" className="text-gray-400 hover:text-primary-400 transition-colors">{t('about.mission.title')}</Link></li>
+              <li><Link to="/#services" className="text-gray-400 hover:text-primary-400 transition-colors">{t('footer.ourServices')}</Link></li>
+              <li><Link to="/#team" className="text-gray-400 hover:text-primary-400 transition-colors">{t('footer.ourTeam')}</Link></li>
+              <li><Link to="/#advice" className="text-gray-400 hover:text-primary-400 transition-colors">{t('header.advice')}</Link></li>
+              <li><Link to="/#contact" className="text-gray-400 hover:text-primary-400 transition-colors">{t('header.contact')}</Link></li>
             </ul>
           </div>
 

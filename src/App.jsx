@@ -1,4 +1,4 @@
-import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import { BrowserRouter as Router, Navigate, Route, Routes } from 'react-router-dom';
 import { MotionConfig } from 'framer-motion';
 import { useEffect, useState } from 'react';
 import ScrollToTop from './components/ScrollToTop';
@@ -6,12 +6,6 @@ import Header from './components/Header';
 import Footer from './components/Footer';
 import WhatsAppButton from './components/WhatsAppButton';
 import Home from './pages/Home';
-import About from './pages/About';
-import Services from './pages/Services';
-import Team from './pages/Team';
-import Gallery from './pages/Gallery';
-import Contact from './pages/Contact';
-import Conseils from './pages/Conseils';
 
 function App() {
   const [isMobile, setIsMobile] = useState(false);
@@ -40,12 +34,13 @@ function App() {
           <main className="flex-grow">
             <Routes>
               <Route path="/" element={<Home />} />
-              <Route path="/a-propos" element={<About />} />
-              <Route path="/services" element={<Services />} />
-              <Route path="/equipe" element={<Team />} />
-              <Route path="/avant-apres" element={<Gallery />} />
-              <Route path="/conseils" element={<Conseils />} />
-              <Route path="/contact" element={<Contact />} />
+              <Route path="/a-propos" element={<Navigate to="/#about" replace />} />
+              <Route path="/services" element={<Navigate to="/#services" replace />} />
+              <Route path="/equipe" element={<Navigate to="/#team" replace />} />
+              <Route path="/avant-apres" element={<Navigate to="/#testimonials" replace />} />
+              <Route path="/conseils" element={<Navigate to="/#advice" replace />} />
+              <Route path="/contact" element={<Navigate to="/#contact" replace />} />
+              <Route path="*" element={<Navigate to="/" replace />} />
             </Routes>
           </main>
           <Footer />

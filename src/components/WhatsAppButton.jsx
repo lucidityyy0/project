@@ -5,7 +5,7 @@ import { useTranslation } from 'react-i18next';
 
 const WhatsAppButton = () => {
   const { t } = useTranslation();
-  const phoneNumber = '212XXXXXXXXX';
+  const phoneNumber = '212522213566';
   const message = encodeURIComponent(t('whatsappButton.message'));
 
   return (
