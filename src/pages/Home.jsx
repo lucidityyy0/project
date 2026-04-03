@@ -157,34 +157,6 @@ const Home = () => {
         </div>
       </section>
 
-      <section id="about" className="scroll-mt-28 py-16 sm:py-20 lg:py-24 bg-white">
-        <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="grid lg:grid-cols-[1.1fr_0.9fr] gap-10 lg:gap-16 items-center">
-            <div>
-              <p className="uppercase tracking-[0.2em] text-xs font-semibold text-gray-400 mb-4">{t('about.hero.subtitle')}</p>
-              <h2 className="text-2xl sm:text-4xl lg:text-5xl font-light text-gray-900 leading-tight" dangerouslySetInnerHTML={{ __html: t('about.hero.title') }} />
-              <p className="mt-6 text-gray-600 text-base sm:text-lg leading-relaxed">{t('about.hero.description')}</p>
-              <p className="mt-5 text-gray-500 leading-relaxed">{t('home.intro.extendedDescription')}</p>
-            </div>
-
-            <div className="grid sm:grid-cols-2 gap-4">
-              {[
-                { title: t('home.whyChooseUs.items.tech.title'), desc: t('home.whyChooseUs.items.tech.desc') },
-                { title: t('home.whyChooseUs.items.painless.title'), desc: t('home.whyChooseUs.items.painless.desc') },
-                { title: t('home.whyChooseUs.items.transparency.title'), desc: t('home.whyChooseUs.items.transparency.desc') },
-                { title: t('home.whyChooseUs.items.expertTeam.title'), desc: t('home.whyChooseUs.items.expertTeam.desc') }
-              ].map((item) => (
-                <article key={item.title} className="bg-gray-50 rounded-2xl p-6 border border-gray-100">
-                  <FaShieldAlt className="text-primary-600 mb-4" />
-                  <h3 className="text-lg font-semibold text-gray-900 mb-2">{item.title}</h3>
-                  <p className="text-sm text-gray-600 leading-relaxed">{item.desc}</p>
-                </article>
-              ))}
-            </div>
-          </div>
-        </div>
-      </section>
-
       <section id="services" className="scroll-mt-28 py-16 sm:py-20 lg:py-24 bg-gray-50">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex flex-col lg:flex-row lg:items-end lg:justify-between gap-5 mb-10">
@@ -279,6 +251,34 @@ const Home = () => {
               </div>
             </div>
           )}
+        </div>
+      </section>
+
+      <section id="about" className="scroll-mt-28 py-16 sm:py-20 lg:py-24 bg-white">
+        <div className="container mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="grid lg:grid-cols-[1.1fr_0.9fr] gap-10 lg:gap-16 items-center">
+            <div>
+              <p className="uppercase tracking-[0.2em] text-xs font-semibold text-gray-400 mb-4">{t('about.hero.subtitle')}</p>
+              <h2 className="text-2xl sm:text-4xl lg:text-5xl font-light text-gray-900 leading-tight" dangerouslySetInnerHTML={{ __html: t('about.hero.title') }} />
+              <p className="mt-6 text-gray-600 text-base sm:text-lg leading-relaxed">{t('about.hero.description')}</p>
+              <p className="mt-5 text-gray-500 leading-relaxed">{t('home.intro.extendedDescription')}</p>
+            </div>
+
+            <div className="grid sm:grid-cols-2 gap-4">
+              {[
+                { title: t('home.whyChooseUs.items.tech.title'), desc: t('home.whyChooseUs.items.tech.desc') },
+                { title: t('home.whyChooseUs.items.painless.title'), desc: t('home.whyChooseUs.items.painless.desc') },
+                { title: t('home.whyChooseUs.items.transparency.title'), desc: t('home.whyChooseUs.items.transparency.desc') },
+                { title: t('home.whyChooseUs.items.expertTeam.title'), desc: t('home.whyChooseUs.items.expertTeam.desc') }
+              ].map((item) => (
+                <article key={item.title} className="bg-gray-50 rounded-2xl p-6 border border-gray-100">
+                  <FaShieldAlt className="text-primary-600 mb-4" />
+                  <h3 className="text-lg font-semibold text-gray-900 mb-2">{item.title}</h3>
+                  <p className="text-sm text-gray-600 leading-relaxed">{item.desc}</p>
+                </article>
+              ))}
+            </div>
+          </div>
         </div>
       </section>
 

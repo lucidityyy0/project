@@ -74,9 +74,9 @@ const Header = () => {
 
   const navLinks = [
     { hash: '#home', label: t('header.home') },
-    { hash: '#about', label: t('about.mission.title') },
     { hash: '#services', label: t('header.services') },
     { hash: '#team', label: t('header.team') },
+    { hash: '#about', label: t('about.mission.title') },
     { hash: '#advice', label: t('header.advice') },
     { hash: '#contact', label: t('header.contact') }
   ];
