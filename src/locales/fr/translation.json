@@ -167,6 +167,12 @@
           "rating": 5
         }
       ]
+    },
+    "googleReviews": {
+      "subtitle": "AVIS GOOGLE",
+      "title": "Ce que disent nos patients",
+      "description": "Retrouvez les retours de nos patients sur Google.",
+      "button": "Voir tous les avis Google"
     }
   },
   "about": {
@@ -370,7 +376,7 @@
       {
         "name": "Dr Awatif Zaki Ziraoui",
         "role": "Orthodontiste - Inscription a l'Ordre n°3121",
-        "description": "Docteur d'Etat en chirurgie dentaire, laureate de l'Universite de Monastir et ancienne attachee des hopitaux de Liege. Elle prend en charge l'orthodontie de l'enfant, de l'adolescent et de l'adulte, y compris les aligneurs transparents, les troubles respiratoires du sommeil et l'evaluation fonctionnelle de l'ATM."
+        "description": "Docteur d'Etat en chirurgie dentaire, laureate de l'Universite de Monastir et ancienne attachee des hopitaux de Liege. Specialiste en orthopedie dento-faciale et en orthodontie de l'adulte et de l'enfant, elle prend en charge les aligneurs transparents, les troubles respiratoires du sommeil et l'evaluation fonctionnelle de l'ATM."
       },
       {
         "name": "Dr Nawar Dellero",
@@ -411,16 +417,17 @@
       "fullAddress": "836 boulevard El Qods 2e etage\n20480 Casablanca, Maroc",
       "phone": "Telephone",
       "phoneValue": "+212 522 21 35 66",
+      "phoneValueSecondary": "06 93 07 00 42",
       "email": "Email",
       "emailValue": "contact@mandarona.ma",
       "hours": {
         "title": "Horaires d'ouverture",
-        "week": "Lundi - Vendredi",
-        "weekValue": "09:00 - 19:00",
+        "mondayFriday": "Lundi et Vendredi",
+        "mondayFridayValue": "09:00 - 12:30 / 15:00 - 19:00",
+        "tuesdayThursday": "Mardi, Mercredi et Jeudi",
+        "tuesdayThursdayValue": "09:00 - 16:30",
         "saturday": "Samedi",
-        "saturdayValue": "09:00 - 13:00",
-        "sunday": "Dimanche",
-        "closed": "Ferme"
+        "saturdayValue": "09:00 - 12:30"
       }
     },
     "form": {

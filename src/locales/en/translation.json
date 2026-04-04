@@ -167,6 +167,12 @@
           "rating": 5
         }
       ]
+    },
+    "googleReviews": {
+      "subtitle": "GOOGLE REVIEWS",
+      "title": "What our patients say",
+      "description": "Read patient feedback on Google.",
+      "button": "See all Google reviews"
     }
   },
   "about": {
@@ -370,7 +376,7 @@
       {
         "name": "Dr Awatif Zaki Ziraoui",
         "role": "Orthodontist - Registration no. 3121",
-        "description": "State Doctor in Dental Surgery, graduate of the University of Monastir, and former hospital fellow in Liege. She manages orthodontic care for children, adolescents, and adults, including clear aligners, sleep-disordered breathing support, and functional TMJ evaluation."
+        "description": "State Doctor in Dental Surgery, graduate of the University of Monastir, and former hospital fellow in Liege. Specialist in dentofacial orthopedics and orthodontics for adults and children, she manages clear aligners, sleep-disordered breathing support, and functional TMJ evaluation."
       },
       {
         "name": "Dr Nawar Dellero",
@@ -411,16 +417,17 @@
       "fullAddress": "836 boulevard El Qods, 2nd floor\n20480 Casablanca, Morocco",
       "phone": "Phone",
       "phoneValue": "+212 522 21 35 66",
+      "phoneValueSecondary": "06 93 07 00 42",
       "email": "Email",
       "emailValue": "contact@mandarona.ma",
       "hours": {
         "title": "Opening hours",
-        "week": "Monday - Friday",
-        "weekValue": "09:00 - 19:00",
+        "mondayFriday": "Monday and Friday",
+        "mondayFridayValue": "09:00 - 12:30 / 15:00 - 19:00",
+        "tuesdayThursday": "Tuesday, Wednesday and Thursday",
+        "tuesdayThursdayValue": "09:00 - 16:30",
         "saturday": "Saturday",
-        "saturdayValue": "09:00 - 13:00",
-        "sunday": "Sunday",
-        "closed": "Closed"
+        "saturdayValue": "09:00 - 12:30"
       }
     },
     "form": {

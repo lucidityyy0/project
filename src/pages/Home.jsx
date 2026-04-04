@@ -17,6 +17,7 @@ import NabilaImg from '../assets/nabila.png';
 import HassanImg from '../assets/hassan.png';
 import DirarImg from '../assets/dirar.png';
 import BenjellounImg from '../assets/benjelloun.png';
+import GoogleLogo from '../assets/google.png';
 
 const Home = () => {
   const { t } = useTranslation();
@@ -74,6 +75,7 @@ const Home = () => {
   ];
 
   const doctorImages = [NabilaImg, HassanImg, DirarImg, BenjellounImg];
+  const googleReviewsUrl = 'https://www.google.com/search?q=Centre+Dentaire+Mandarona+Casablanca+avis';
 
   const handleChange = (event) => {
     const { name, value } = event.target;
@@ -307,9 +309,12 @@ const Home = () => {
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid lg:grid-cols-[0.85fr_1.15fr] gap-8 items-start">
             <div className="rounded-[2rem] border border-white/20 bg-white/5 p-8">
-              <p className="uppercase tracking-[0.2em] text-xs text-primary-200 mb-4">{t('home.testimonials.recent')}</p>
-              <h2 className="text-2xl sm:text-4xl font-light leading-tight">{t('home.testimonials.text')}</h2>
-              <p className="mt-5 text-primary-100">{t('home.testimonials.note')}</p>
+              <div className="inline-flex items-center gap-3 bg-white/10 border border-white/20 rounded-full px-4 py-2">
+                <img src={GoogleLogo} alt={t('home.testimonials.googleAlt')} className="w-5 h-5" loading="lazy" decoding="async" />
+                <p className="uppercase tracking-[0.2em] text-xs text-primary-200">{t('home.googleReviews.subtitle')}</p>
+              </div>
+              <h2 className="text-2xl sm:text-4xl font-light leading-tight mt-5">{t('home.googleReviews.title')}</h2>
+              <p className="mt-5 text-primary-100">{t('home.googleReviews.description')}</p>
               <div className="flex items-center gap-3 mt-8">
                 <span className="text-5xl font-light">4.9</span>
                 <div className="flex text-yellow-300">
@@ -318,6 +323,15 @@ const Home = () => {
                   ))}
                 </div>
               </div>
+              <a
+                href={googleReviewsUrl}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="mt-8 inline-flex items-center gap-2 bg-white text-gray-900 px-5 py-3 rounded-full font-semibold hover:bg-primary-100 transition-colors"
+              >
+                <img src={GoogleLogo} alt={t('home.testimonials.googleAlt')} className="w-4 h-4" loading="lazy" decoding="async" />
+                {t('home.googleReviews.button')}
+              </a>
             </div>
 
             <div className="grid gap-4">
@@ -364,6 +378,9 @@ const Home = () => {
                     <a href="tel:+212522213566" className="text-sm text-gray-600 hover:text-primary-600 transition-colors">
                       {t('contact.info.phoneValue')}
                     </a>
+                    <a href="tel:+212693070042" className="block mt-1 text-sm text-gray-600 hover:text-primary-600 transition-colors">
+                      {t('contact.info.phoneValueSecondary')}
+                    </a>
                   </div>
                 </div>
                 <div className="flex gap-3">
@@ -378,9 +395,9 @@ const Home = () => {
                 <div className="pt-2 border-t border-gray-200 flex gap-3">
                   <FaClock className="text-primary-600 mt-1 flex-shrink-0" />
                   <div className="text-sm text-gray-600">
-                    <p><span className="font-semibold text-gray-900">{t('contact.info.hours.week')}:</span> {t('contact.info.hours.weekValue')}</p>
+                    <p><span className="font-semibold text-gray-900">{t('contact.info.hours.mondayFriday')}:</span> {t('contact.info.hours.mondayFridayValue')}</p>
+                    <p className="mt-1"><span className="font-semibold text-gray-900">{t('contact.info.hours.tuesdayThursday')}:</span> {t('contact.info.hours.tuesdayThursdayValue')}</p>
                     <p className="mt-1"><span className="font-semibold text-gray-900">{t('contact.info.hours.saturday')}:</span> {t('contact.info.hours.saturdayValue')}</p>
-                    <p className="mt-1"><span className="font-semibold text-gray-900">{t('contact.info.hours.sunday')}:</span> {t('contact.info.hours.closed')}</p>
                   </div>
                 </div>
               </div>
