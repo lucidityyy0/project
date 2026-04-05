@@ -61,7 +61,7 @@ const Home = () => {
   ];
 
   const stats = [
-    { value: '17+', label: t('stats.yearsExperience') },
+    { value: '20+', label: t('stats.yearsExperience') },
     { value: '5000+', label: t('stats.satisfiedPatients') },
     { value: '4.9', label: t('stats.googleReviews') },
     { value: '100%', label: t('stats.qualityCommitment') }
@@ -387,7 +387,7 @@ const Home = () => {
                   <FaEnvelope className="text-primary-600 mt-1 flex-shrink-0" />
                   <div>
                     <p className="font-semibold text-gray-900">{t('contact.info.email')}</p>
-                    <a href="mailto:contact@mandarona.ma" className="text-sm text-gray-600 hover:text-primary-600 transition-colors">
+                    <a href="mailto:contact@centredentairemandarona.ma" className="text-sm text-gray-600 hover:text-primary-600 transition-colors">
                       {t('contact.info.emailValue')}
                     </a>
                   </div>

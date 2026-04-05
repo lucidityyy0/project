@@ -34,7 +34,7 @@ const About = () => {
                 <div className="flex items-center gap-4 bg-accent-100 px-6 py-4 rounded-2xl">
                   <FaTooth className="text-2xl" />
                   <div>
-                    <span className="block font-bold text-xl">17+</span>
+                    <span className="block font-bold text-xl">20+</span>
                     <span className="text-sm">{t('stats.yearsExperience')}</span>
                   </div>
                 </div>

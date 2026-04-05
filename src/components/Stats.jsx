@@ -8,7 +8,7 @@ const Stats = () => {
   const stats = [
     {
       icon: <FaAward />,
-      number: '17+',
+      number: '20+',
       label: t('stats.yearsExperience'),
       color: 'bg-accent-100 text-primary-600'
     },

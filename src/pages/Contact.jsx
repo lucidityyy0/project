@@ -112,7 +112,7 @@ const Contact = () => {
                     </div>
                     <div>
                       <h4 className="font-bold mb-1">{t('contact.info.email')}</h4>
-                      <a href="mailto:contact@mandarona.ma" className="opacity-80 hover:opacity-100 transition-opacity text-sm">{t('contact.info.emailValue')}</a>
+                      <a href="mailto:contact@centredentairemandarona.ma" className="opacity-80 hover:opacity-100 transition-opacity text-sm">{t('contact.info.emailValue')}</a>
                     </div>
                   </div>
                 </div>
